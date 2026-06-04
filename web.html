@@ -483,6 +483,32 @@
       background: var(--color-text);
     }
 
+    /* Header background when menu is open on mobile */
+    .nav.menu-open {
+      background: #111111 !important;
+      box-shadow: none !important;
+    }
+
+    .nav.menu-open .nav-logo {
+      color: #ffffff !important;
+    }
+
+    .nav.menu-open .nav-toggle span {
+      background: #ffffff !important;
+    }
+
+    /* Hamburger animation */
+    .nav.menu-open .nav-toggle span:nth-child(1) {
+      transform: rotate(45deg) translate(5px, 5px);
+    }
+    .nav.menu-open .nav-toggle span:nth-child(2) {
+      opacity: 0;
+      transform: translateX(-10px);
+    }
+    .nav.menu-open .nav-toggle span:nth-child(3) {
+      transform: rotate(-45deg) translate(5px, -5px);
+    }
+
     @media (max-width: 768px) {
       .nav-links {
         display: none;
@@ -492,9 +518,10 @@
         right: 0;
         flex-direction: column;
         gap: 0;
-        background: var(--color-nav-scrolled);
+        background: #111111 !important; /* Premium deep charcoal black */
         padding: 1rem 0;
-        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
+        border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
       }
 
       .nav-links.open {
@@ -507,13 +534,39 @@
 
       .nav-links a {
         display: block;
-        padding: 0.75rem 2rem;
-        color: var(--color-text-muted) !important;
-        border-bottom: 1px solid var(--color-border);
+        padding: 0.85rem 2rem;
+        color: rgba(255, 255, 255, 0.8) !important; /* High contrast off-white */
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+        font-weight: 500;
+        letter-spacing: 0.06em;
+      }
+
+      .nav-links a:hover,
+      .nav-links a:active {
+        color: #ffffff !important;
+        background: rgba(255, 255, 255, 0.04);
+      }
+
+      /* Keep the CTA button styled like a button on mobile */
+      .nav-links .nav-cta {
+        background: var(--color-cta-bg) !important;
+        color: var(--color-cta-text) !important;
+        text-align: center;
+        margin: 0.75rem 2rem;
+        border-radius: 4px;
+        border-bottom: none;
+        padding: 0.75rem 1.5rem;
+      }
+      
+      .nav-links .nav-cta:hover {
+        background: var(--color-cta-hover) !important;
       }
 
       .lang-switch-wrap {
-        padding: 0.75rem 2rem;
+        padding: 1rem 2rem;
+        border-top: 1px solid rgba(255, 255, 255, 0.06);
+        display: flex;
+        justify-content: flex-start;
       }
 
       .nav-toggle {
@@ -3171,9 +3224,16 @@
     // Hamburger
     const toggle = document.getElementById('navToggle');
     const links = document.getElementById('navLinks');
-    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    const navEl = document.getElementById('nav');
+    toggle.addEventListener('click', () => {
+      links.classList.toggle('open');
+      navEl.classList.toggle('menu-open');
+    });
     links.querySelectorAll('a').forEach(a => {
-      a.addEventListener('click', () => links.classList.remove('open'));
+      a.addEventListener('click', () => {
+        links.classList.remove('open');
+        navEl.classList.remove('menu-open');
+      });
     });
     // Gallery expand / collapse
     const expandBtn = document.getElementById('galleryExpandBtn');
