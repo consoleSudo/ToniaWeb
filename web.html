@@ -1,0 +1,3906 @@
+<!DOCTYPE html>
+<html lang="hr" data-theme="emerald">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Luksuzni apartman Antonia – Imotski, 30 km od mora. Privatna oaza za 3 gosta, etno konoba, dvorište, roštilj. Rezervirajte izravno." />
+  <meta name="keywords"
+    content="apartment Imotski, accommodation Makarska, Podbablje, private apartment, ethno tavern, holiday Dalmatia" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Luxury Apartment Antonia – Imotski" />
+  <meta property="og:description"
+    content="Privatna oaza 30 km od mora. Etno konoba, dvorište, roštilj. Rezervirajte izravno." />
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="hr_HR" />
+
+  <title>Luxury Apartment Antonia | Imotski – Makarska</title>
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:wght@300;400;500&family=DM+Sans:wght@300;400;500&display=swap"
+    rel="stylesheet" />
+
+  <!-- Flatpickr CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+
+  <!-- Flatpickr JS -->
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/hr.js"></script>
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <style>
+    /* ============================================================
+       CSS CUSTOM PROPERTIES — SVE 3 TEME
+       Mijenja se samo data-theme na <html> tagu
+    ============================================================ */
+
+    /* --- TEMA 1: EMERALD ESCAPE (default) --- */
+    [data-theme="emerald"] {
+      --color-bg: #F5F0E8;
+      --color-bg-alt: #EDE8DF;
+      --color-surface: #FFFFFF;
+      --color-primary: #1B4332;
+      --color-primary-light: #2D6A4F;
+      --color-accent: #C9A96E;
+      --color-text: #1A1A1A;
+      --color-text-muted: #6B6560;
+      --color-border: #D8D0C4;
+      --color-hero-overlay: rgba(27, 67, 50, 0.55);
+      --color-cta-bg: #1B4332;
+      --color-cta-text: #F5F0E8;
+      --color-cta-hover: #2D6A4F;
+      --color-nav-bg: transparent;
+      --color-nav-scrolled: rgba(245, 240, 232, 0.97);
+      --color-whatsapp: #25D366;
+    }
+
+    /* --- TEMA 2: LUXURY MODERN --- */
+    [data-theme="luxury"] {
+      --color-bg: #0D0D0D;
+      --color-bg-alt: #141414;
+      --color-surface: #1A1A1A;
+      --color-primary: #C9A96E;
+      --color-primary-light: #E2C48A;
+      --color-accent: #C9A96E;
+      --color-text: #F0EBE0;
+      --color-text-muted: #9A9080;
+      --color-border: #2A2A2A;
+      --color-hero-overlay: rgba(0, 0, 0, 0.65);
+      --color-cta-bg: #C9A96E;
+      --color-cta-text: #0D0D0D;
+      --color-cta-hover: #E2C48A;
+      --color-nav-bg: transparent;
+      --color-nav-scrolled: rgba(13, 13, 13, 0.97);
+      --color-whatsapp: #25D366;
+    }
+
+    /* --- TEMA 3: RUSTIC & COZY --- */
+    [data-theme="rustic"] {
+      --color-bg: #F2EBE0;
+      --color-bg-alt: #E8DDD0;
+      --color-surface: #FDF8F3;
+      --color-primary: #8B5E3C;
+      --color-primary-light: #A67650;
+      --color-accent: #1B4332;
+      --color-text: #2C1F14;
+      --color-text-muted: #7A6555;
+      --color-border: #D4C4B0;
+      --color-hero-overlay: rgba(44, 31, 20, 0.60);
+      --color-cta-bg: #8B5E3C;
+      --color-cta-text: #FDF8F3;
+      --color-cta-hover: #A67650;
+      --color-nav-bg: transparent;
+      --color-nav-scrolled: rgba(242, 235, 224, 0.97);
+      --color-whatsapp: #25D366;
+    }
+
+    /* ============================================================
+       GLOBALNI RESET I BASE
+    ============================================================ */
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      font-family: 'DM Sans', sans-serif;
+      background-color: var(--color-bg);
+      color: var(--color-text);
+      line-height: 1.6;
+      transition: background-color 0.4s ease, color 0.4s ease;
+      overflow-x: hidden;
+    }
+
+    /* ============================================================
+       TIPOGRAFIJA
+    ============================================================ */
+    h1,
+    h2,
+    h3 {
+      font-family: 'Playfair Display', serif;
+      line-height: 1.2;
+      color: var(--color-text);
+    }
+
+    h4,
+    h5,
+    h6 {
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 500;
+    }
+
+    .eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--color-accent);
+    }
+
+    .serif-light {
+      font-family: 'Cormorant Garamond', serif;
+      font-weight: 300;
+    }
+
+    /* ============================================================
+       UTILITY KLASE
+    ============================================================ */
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    .section {
+      padding: 5rem 0;
+    }
+
+    .section-alt {
+      background-color: var(--color-bg-alt);
+    }
+
+    .section-title {
+      font-size: clamp(2rem, 4vw, 3rem);
+      margin-bottom: 1rem;
+    }
+
+    .section-subtitle {
+      font-size: 1.1rem;
+      color: var(--color-text-muted);
+      max-width: 540px;
+      margin: 0 auto;
+    }
+
+    .section-header {
+      margin-bottom: 3.5rem;
+      text-align: center;
+    }
+
+    /* ============================================================
+       GUMBI (CTA)
+    ============================================================ */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.9rem 2rem;
+      border-radius: 2px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      letter-spacing: 0.05em;
+      cursor: pointer;
+      border: none;
+      text-decoration: none;
+      transition: all 0.25s ease;
+    }
+
+    .btn-primary {
+      background-color: var(--color-cta-bg);
+      color: var(--color-cta-text);
+    }
+
+    .btn-primary:hover {
+      background-color: var(--color-cta-hover);
+      transform: translateY(-1px);
+    }
+
+    .btn-outline {
+      background: transparent;
+      color: #ffffff;
+      border: 2px solid rgba(255, 255, 255, 0.85);
+      font-weight: 600;
+    }
+
+    .btn-outline:hover {
+      background: rgba(255, 255, 255, 0.15);
+      border-color: white;
+    }
+
+    /* Hero podnaslov — uvijek bijel, dovoljno kontrasta */
+    .hero-sub {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1rem, 2.5vw, 1.3rem);
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.95);
+      margin-bottom: 2.5rem;
+      letter-spacing: 0.03em;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.4);
+    }
+
+    .btn-whatsapp {
+      background-color: var(--color-whatsapp);
+      color: #ffffff;
+      width: 100%;
+      justify-content: center;
+      font-size: 1rem;
+      padding: 1rem 2rem;
+      border-radius: 2px;
+    }
+
+    .btn-whatsapp:hover {
+      background-color: #1fb855;
+      transform: translateY(-1px);
+    }
+
+    /* ============================================================
+       DIVIDER
+    ============================================================ */
+    .divider {
+      width: 48px;
+      height: 2px;
+      background-color: var(--color-accent);
+      margin: 1.25rem auto;
+    }
+
+    /* ============================================================
+       THEME DEMO SWITCHER (samo za prezentaciju klijentu)
+       Ukloniti iz finalne verzije
+    ============================================================ */
+    .theme-switcher {
+      position: fixed;
+      top: 50%;
+      right: 1rem;
+      transform: translateY(-50%);
+      z-index: 9999;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .theme-btn {
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      border: 2px solid white;
+      cursor: pointer;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+      transition: transform 0.2s;
+    }
+
+    .theme-btn:hover {
+      transform: scale(1.15);
+    }
+
+    .theme-btn[data-t="emerald"] {
+      background: #1B4332;
+    }
+
+    .theme-btn[data-t="luxury"] {
+      background: #C9A96E;
+    }
+
+    .theme-btn[data-t="rustic"] {
+      background: #8B5E3C;
+    }
+
+    /* ============================================================
+       NAV
+    ============================================================ */
+    .nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      z-index: 1000;
+      padding: 1.25rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--color-nav-bg);
+      transition: background 0.35s ease, padding 0.35s ease, box-shadow 0.35s ease;
+    }
+
+    .nav.scrolled {
+      background: var(--color-nav-scrolled);
+      padding: 0.85rem 2rem;
+      box-shadow: 0 1px 20px rgba(0, 0, 0, 0.08);
+    }
+
+    .nav-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.1rem;
+      font-weight: 600;
+      color: #ffffff;
+      text-decoration: none;
+      letter-spacing: 0.02em;
+      transition: color 0.35s ease;
+    }
+
+    .nav.scrolled .nav-logo {
+      color: var(--color-text);
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.85);
+      text-decoration: none;
+      transition: color 0.25s ease;
+    }
+
+    .nav-links a:hover {
+      color: #ffffff;
+    }
+
+    .nav.scrolled .nav-links a {
+      color: var(--color-text-muted);
+    }
+
+    .nav.scrolled .nav-links a:hover {
+      color: var(--color-text);
+    }
+
+    .nav-cta {
+      font-size: 0.82rem !important;
+      font-weight: 500 !important;
+      letter-spacing: 0.08em !important;
+      text-transform: uppercase !important;
+      color: var(--color-cta-text) !important;
+      background: var(--color-cta-bg);
+      padding: 0.55rem 1.4rem;
+      border-radius: 2px;
+      text-decoration: none;
+      transition: background 0.25s ease, transform 0.2s ease !important;
+    }
+
+    .nav-cta:hover {
+      background: var(--color-cta-hover) !important;
+      transform: translateY(-1px) !important;
+    }
+
+    /* Lang Switcher */
+    .lang-switch-wrap {
+      display: flex;
+      align-items: center;
+      margin-left: 0.5rem;
+    }
+
+    .lang-btn {
+      background: rgba(255, 255, 255, 0.1);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: rgba(255, 255, 255, 0.85);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      padding: 0.35rem 0.6rem;
+      border-radius: 4px;
+      cursor: pointer;
+      display: flex;
+      gap: 0.4rem;
+      align-items: center;
+      transition: all 0.25s ease;
+    }
+
+    .nav.scrolled .lang-btn {
+      color: var(--color-text-muted);
+      border-color: var(--color-border);
+      background: transparent;
+    }
+
+    .lang-btn:hover {
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    .nav.scrolled .lang-btn:hover {
+      background: rgba(0, 0, 0, 0.05);
+    }
+
+    .lang-opt {
+      opacity: 0.5;
+      transition: opacity 0.2s;
+    }
+
+    .lang-opt.active {
+      opacity: 1;
+      font-weight: 700;
+    }
+
+    .lang-sep {
+      opacity: 0.3;
+    }
+
+    /* Hamburger */
+    .nav-toggle {
+      display: none;
+      flex-direction: column;
+      gap: 5px;
+      cursor: pointer;
+      background: none;
+      border: none;
+      padding: 4px;
+    }
+
+    .nav-toggle span {
+      display: block;
+      width: 24px;
+      height: 2px;
+      background: white;
+      transition: all 0.3s ease;
+      border-radius: 2px;
+    }
+
+    .nav.scrolled .nav-toggle span {
+      background: var(--color-text);
+    }
+
+    @media (max-width: 768px) {
+      .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        gap: 0;
+        background: var(--color-nav-scrolled);
+        padding: 1rem 0;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+      }
+
+      .nav-links.open {
+        display: flex;
+      }
+
+      .nav-links li {
+        width: 100%;
+      }
+
+      .nav-links a {
+        display: block;
+        padding: 0.75rem 2rem;
+        color: var(--color-text-muted) !important;
+        border-bottom: 1px solid var(--color-border);
+      }
+
+      .nav-toggle {
+        display: flex;
+      }
+    }
+
+    /* ============================================================
+       HERO
+    ============================================================ */
+    .hero {
+      position: relative;
+      height: 100vh;
+      min-height: 600px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      overflow: hidden;
+    }
+
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://a0.muscache.com/im/pictures/hosting/Hosting-1231607867098673134/original/c05ba4ef-e8b9-4115-8fde-fa96486256d8.jpeg');
+      background-size: cover;
+      background-position: center;
+      transform: scale(1.05);
+      animation: heroZoom 12s ease-out forwards;
+    }
+
+    @keyframes heroZoom {
+      from {
+        transform: scale(1.05);
+      }
+
+      to {
+        transform: scale(1.00);
+      }
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      background: var(--color-hero-overlay);
+    }
+
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      padding: 0 1.5rem;
+      max-width: 780px;
+      animation: heroFadeUp 1s ease 0.3s both;
+    }
+
+    @keyframes heroFadeUp {
+      from {
+        opacity: 0;
+        transform: translateY(28px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .hero-eyebrow {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 600;
+      letter-spacing: 0.25em;
+      text-transform: uppercase;
+      color: #ffffff;
+      opacity: 0.9;
+      margin-bottom: 1.25rem;
+      text-shadow: 0 1px 8px rgba(0, 0, 0, 0.5);
+    }
+
+    .hero h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(2.8rem, 7vw, 5.5rem);
+      font-weight: 700;
+      color: #ffffff;
+      line-height: 1.1;
+      margin-bottom: 1.25rem;
+    }
+
+    .hero h1 em {
+      font-style: italic;
+      font-weight: 400;
+    }
+
+    .hero-btns {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* Trust badges na dnu heroja */
+    .hero-badges {
+      position: absolute;
+      bottom: 2rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      justify-content: center;
+      animation: heroFadeUp 1s ease 0.8s both;
+    }
+
+    .hero-badge {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 500;
+      letter-spacing: 0.08em;
+      color: rgba(255, 255, 255, 0.75);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .hero-badge i {
+      color: var(--color-accent);
+      font-size: 0.8rem;
+    }
+
+    .hero-badge-sep {
+      color: rgba(255, 255, 255, 0.25);
+      font-size: 0.7rem;
+    }
+
+    /* Scroll indicator */
+    .hero-scroll {
+      position: absolute;
+      bottom: 5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      z-index: 2;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.4rem;
+      animation: bounce 2s infinite 2s;
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .hero-scroll span {
+      font-size: 0.65rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .hero-scroll i {
+      color: rgba(255, 255, 255, 0.4);
+      font-size: 0.9rem;
+    }
+
+    @keyframes bounce {
+
+      0%,
+      100% {
+        transform: translateX(-50%) translateY(0);
+      }
+
+      50% {
+        transform: translateX(-50%) translateY(6px);
+      }
+    }
+
+    /* ============================================================
+       RESPONSIVE HELPERS
+    ============================================================ */
+    @media (max-width: 768px) {
+      .container {
+        padding: 0 1.25rem;
+      }
+
+      .section {
+        padding: 3.5rem 0;
+      }
+
+      .hero-badges {
+        gap: 0.75rem;
+        bottom: 1.5rem;
+      }
+
+      .hero-badge-sep {
+        display: none;
+      }
+    }
+
+    /* ============================================================
+       SOCIAL PROOF BAR
+    ============================================================ */
+    .proof-bar {
+      background-color: var(--color-primary);
+      padding: 1rem 2rem;
+    }
+
+    .proof-bar-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+    }
+
+    .proof-item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.8rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      color: rgba(255, 255, 255, 0.9);
+    }
+
+    .proof-item i {
+      color: var(--color-accent);
+      font-size: 0.85rem;
+    }
+
+    .proof-sep {
+      width: 1px;
+      height: 16px;
+      background: rgba(255, 255, 255, 0.2);
+    }
+
+    @media (max-width: 600px) {
+      .proof-sep {
+        display: none;
+      }
+
+      .proof-bar {
+        padding: 1rem;
+      }
+
+      .proof-bar-inner {
+        gap: 0.75rem;
+      }
+
+      .proof-item {
+        font-size: 0.72rem;
+      }
+    }
+
+    /* ============================================================
+       O APARTMANU
+    ============================================================ */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 5rem;
+      align-items: center;
+    }
+
+    .about-img-wrap {
+      position: relative;
+    }
+
+    .about-img {
+      width: 100%;
+      height: 520px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .about-img-badge {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -1.5rem;
+      background: var(--color-cta-bg);
+      color: var(--color-cta-text);
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    }
+
+    .about-badge-num {
+      display: block;
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .about-badge-txt {
+      font-size: 0.7rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      opacity: 0.85;
+    }
+
+    .about-desc {
+      color: var(--color-text-muted);
+      margin-bottom: 2rem;
+      font-size: 1.05rem;
+      line-height: 1.75;
+    }
+
+    .about-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .about-list li {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      font-size: 0.95rem;
+      color: var(--color-text);
+    }
+
+    .about-list li i {
+      color: var(--color-accent);
+      font-size: 0.8rem;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 900px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+      }
+
+      .about-img {
+        height: 320px;
+      }
+
+      .about-img-badge {
+        right: 1rem;
+        bottom: -1rem;
+      }
+    }
+
+    /* Gallery preview (collapsed state) */
+    .gallery-preview {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6px;
+      height: 480px;
+      overflow: hidden;
+      /* clip anything that bleeds out */
+      border-radius: 6px;
+    }
+
+    .gp-main {
+      height: 100%;
+      overflow: hidden;
+      min-height: 0;
+      cursor: pointer;
+    }
+
+    .gp-main img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gp-main:hover img {
+      transform: scale(1.03);
+    }
+
+    .gp-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 1fr 1fr;
+      gap: 6px;
+      height: 100%;
+      min-height: 0;
+      /* allow tracks to shrink */
+      overflow: hidden;
+    }
+
+    .gp-cell {
+      position: relative;
+      overflow: hidden;
+      min-height: 0;
+      cursor: pointer;
+    }
+
+    .gp-cell img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+
+    .gp-cell:hover img {
+      transform: scale(1.05);
+    }
+
+    .gp-last {
+      position: relative;
+    }
+
+    .gallery-expand-btn {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.52);
+      border: none;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      cursor: pointer;
+      transition: background 0.2s;
+      width: 100%;
+    }
+
+    .gallery-expand-btn:hover {
+      background: rgba(0, 0, 0, 0.68);
+    }
+
+    .gallery-expand-btn i {
+      font-size: 1.5rem;
+      color: #fff;
+    }
+
+    .gallery-expand-btn span {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: #fff;
+      letter-spacing: 0.03em;
+      text-align: center;
+      padding: 0 0.5rem;
+    }
+
+    /* Full gallery (expanded state) */
+    .gallery-full {
+      display: none;
+    }
+
+    .gallery-full.open {
+      display: block;
+      animation: fadeInUp 0.3s ease;
+    }
+
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(10px);
+      }
+
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    @media (max-width: 640px) {
+      .gallery-preview {
+        grid-template-columns: 1fr;
+        height: auto;
+      }
+
+      .gp-main {
+        height: 220px;
+      }
+
+      .gp-grid {
+        height: 220px;
+      }
+    }
+
+    /* ============================================================
+       LIGHTBOX
+    ============================================================ */
+    .lightbox {
+      display: none;
+      position: fixed;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.93);
+      z-index: 9999;
+      align-items: center;
+      justify-content: center;
+      animation: lbFadeIn 0.2s ease;
+    }
+
+    .lightbox.open {
+      display: flex;
+    }
+
+    @keyframes lbFadeIn {
+      from {
+        opacity: 0;
+      }
+
+      to {
+        opacity: 1;
+      }
+    }
+
+    .lb-content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      max-width: 92vw;
+    }
+
+    .lb-content img {
+      max-width: 88vw;
+      max-height: 82vh;
+      object-fit: contain;
+      border-radius: 4px;
+      box-shadow: 0 8px 40px rgba(0, 0, 0, 0.6);
+      transition: opacity 0.18s ease;
+    }
+
+    .lb-content img.lb-loading {
+      opacity: 0.3;
+    }
+
+    .lb-counter {
+      color: rgba(255, 255, 255, 0.55);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.82rem;
+      margin-top: 0.9rem;
+      letter-spacing: 0.1em;
+    }
+
+    .lb-close {
+      position: fixed;
+      top: 1.25rem;
+      right: 1.25rem;
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #fff;
+      width: 46px;
+      height: 46px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.3rem;
+      transition: background 0.2s, transform 0.2s;
+      z-index: 10000;
+    }
+
+    .lb-close:hover {
+      background: rgba(255, 255, 255, 0.2);
+      transform: rotate(90deg);
+    }
+
+    .lb-nav {
+      position: fixed;
+      top: 50%;
+      transform: translateY(-50%);
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid rgba(255, 255, 255, 0.18);
+      color: #fff;
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 1.2rem;
+      transition: background 0.2s, transform 0.2s;
+      z-index: 10000;
+    }
+
+    .lb-nav:hover {
+      background: rgba(255, 255, 255, 0.22);
+    }
+
+    .lb-prev {
+      left: 1.25rem;
+    }
+
+    .lb-prev:hover {
+      transform: translateY(-50%) translateX(-3px);
+    }
+
+    .lb-next {
+      right: 1.25rem;
+    }
+
+    .lb-next:hover {
+      transform: translateY(-50%) translateX(3px);
+    }
+
+    @media (max-width: 600px) {
+      .lb-nav {
+        display: none;
+      }
+
+      .lb-content img {
+        max-width: 96vw;
+        max-height: 75vh;
+      }
+    }
+
+    .gallery-tabs {
+      display: flex;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 2rem;
+    }
+
+    .gallery-tab {
+      padding: 0.5rem 1.1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 500;
+      letter-spacing: 0.06em;
+      border: 1px solid var(--color-border);
+      background: transparent;
+      color: var(--color-text-muted);
+      cursor: pointer;
+      border-radius: 2px;
+      transition: all 0.2s ease;
+    }
+
+    .gallery-tab:hover {
+      border-color: var(--color-primary);
+      color: var(--color-primary);
+    }
+
+    .gallery-tab.active {
+      background: var(--color-primary);
+      color: var(--color-cta-text);
+      border-color: var(--color-primary);
+    }
+
+    .gallery-item.hidden {
+      display: none;
+    }
+
+    /* ============================================================
+       GALERIJA GRID
+    ============================================================ */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: auto auto;
+      gap: 0.75rem;
+    }
+
+    .gallery-item--wide {
+      grid-column: span 2;
+    }
+
+    .gallery-item {
+      position: relative;
+      overflow: hidden;
+      cursor: pointer;
+      background: var(--color-border);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 280px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.5s ease;
+    }
+
+    .gallery-item--wide img {
+      height: 380px;
+    }
+
+    .gallery-item:hover img {
+      transform: scale(1.04);
+    }
+
+    .gallery-overlay {
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 0.3s ease;
+    }
+
+    .gallery-overlay i {
+      color: white;
+      font-size: 1.8rem;
+      opacity: 0;
+      transform: scale(0.8);
+      transition: all 0.3s ease;
+    }
+
+    .gallery-item:hover .gallery-overlay {
+      background: rgba(0, 0, 0, 0.35);
+    }
+
+    .gallery-item:hover .gallery-overlay i {
+      opacity: 1;
+      transform: scale(1);
+    }
+
+    @media (max-width: 768px) {
+      .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+
+      .gallery-item--wide {
+        grid-column: span 2;
+      }
+
+      .gallery-item img {
+        height: 200px;
+      }
+
+      .gallery-item--wide img {
+        height: 260px;
+      }
+    }
+
+    /* ============================================================
+       AMENITIJI
+    ============================================================ */
+    .amenities-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 2rem;
+    }
+
+    .amenity-group {
+      background: var(--color-surface);
+      padding: 1.5rem;
+      border: 1px solid var(--color-border);
+    }
+
+    .amenity-group-title {
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .amenity-group-title i {
+      color: var(--color-accent);
+    }
+
+    .amenity-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .amenity-list li {
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .amenity-list li i {
+      color: var(--color-accent);
+      font-size: 0.65rem;
+      flex-shrink: 0;
+    }
+
+    @media (max-width: 1024px) {
+      .amenities-grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    @media (max-width: 768px) {
+      .amenities-grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (max-width: 480px) {
+      .amenities-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* Booking forma CSS */
+    .form-nights {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--color-bg-alt);
+      border: 1px solid var(--color-border);
+      padding: 0.65rem 1rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.9rem;
+      font-weight: 500;
+      color: var(--color-primary);
+      margin-bottom: 1rem;
+      border-radius: 2px;
+      transition: color 0.2s;
+    }
+
+    .form-nights i {
+      color: var(--color-accent);
+    }
+
+    .form-error {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: #c0392b;
+      min-height: 1.2em;
+      margin-bottom: 0.5rem;
+    }
+
+    .btn-whatsapp {
+      width: 100%;
+      padding: 1rem;
+      background: #25D366;
+      color: white;
+      border: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 1rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.6rem;
+      transition: background 0.2s ease, transform 0.15s ease;
+      border-radius: 2px;
+    }
+
+    .btn-whatsapp:hover {
+      background: #1ebe5c;
+      transform: translateY(-1px);
+    }
+
+    .btn-whatsapp i {
+      font-size: 1.2rem;
+    }
+
+    .form-note {
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--color-text-muted);
+      margin-top: 0.6rem;
+      font-family: 'DM Sans', sans-serif;
+    }
+
+    /* ============================================================
+       SECTION DARK (za naizmjenične sekcije)
+    ============================================================ */
+    .section-dark {
+      background-color: var(--color-primary);
+      color: #fff;
+    }
+
+    .section-dark .eyebrow {
+      color: var(--color-accent);
+      opacity: 1;
+    }
+
+    .section-dark .divider {
+      background: var(--color-accent);
+    }
+
+    .section-dark .section-title {
+      color: #fff;
+    }
+
+    .section-dark .section-subtitle {
+      color: rgba(255, 255, 255, 0.6);
+    }
+
+    /* ============================================================
+       RECENZIJE — CAROUSEL
+    ============================================================ */
+    .reviews-carousel-wrap {
+      overflow: hidden;
+      position: relative;
+      width: 100%;
+      cursor: grab;
+      user-select: none;
+    }
+
+    .reviews-carousel-wrap.dragging {
+      cursor: grabbing;
+    }
+
+    .reviews-track {
+      display: flex;
+      gap: 1.5rem;
+      width: max-content;
+      will-change: transform;
+    }
+
+    .review-card {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      padding: 2rem;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      width: 340px;
+      flex-shrink: 0;
+    }
+
+    .review-quote-icon {
+      font-size: 2.5rem;
+      line-height: 1;
+      color: var(--color-accent);
+      opacity: 0.4;
+      font-family: Georgia, serif;
+      position: absolute;
+      top: 1.2rem;
+      right: 1.5rem;
+    }
+
+    .review-stars {
+      display: flex;
+      gap: 0.2rem;
+      color: #F4B942;
+      font-size: 0.9rem;
+    }
+
+    .review-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.05rem;
+      font-weight: 400;
+      color: var(--color-text);
+      line-height: 1.65;
+      font-style: italic;
+      flex: 1;
+    }
+
+    .review-footer {
+      padding-top: 1rem;
+      border-top: 1px solid var(--color-border);
+    }
+
+    .review-author {
+      display: flex;
+      flex-direction: column;
+      gap: 0.15rem;
+    }
+
+    .review-name {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      font-weight: 600;
+      color: var(--color-text);
+    }
+
+    .review-meta {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+    }
+
+    /* ============================================================
+       FAQ ACCORDION
+    ============================================================ */
+    .faq-list {
+      max-width: 760px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 0;
+    }
+
+    .faq-item {
+      border-bottom: 1px solid var(--color-border);
+    }
+
+    .faq-item:first-child {
+      border-top: 1px solid var(--color-border);
+    }
+
+    .faq-question {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 1.3rem 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      cursor: pointer;
+      text-align: left;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: var(--color-text);
+      transition: color 0.2s;
+    }
+
+    .faq-question:hover {
+      color: var(--color-primary);
+    }
+
+    .faq-icon {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      border: 1px solid var(--color-border);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      color: var(--color-primary);
+      transition: transform 0.3s ease, background 0.2s, border-color 0.2s;
+    }
+
+    .faq-item.open .faq-icon {
+      transform: rotate(45deg);
+      background: var(--color-primary);
+      border-color: var(--color-primary);
+      color: var(--color-cta-text);
+    }
+
+    .faq-answer {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.35s ease, padding 0.3s ease;
+    }
+
+    .faq-answer-inner {
+      padding-bottom: 1.3rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+    }
+
+    .faq-item.open .faq-answer {
+      max-height: 300px;
+    }
+
+    /* ============================================================
+       BOOKING SEKCIJA
+    ============================================================ */
+    .booking-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1.1fr;
+      gap: 4rem;
+      align-items: start;
+    }
+
+    .booking-desc {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.95rem;
+      color: var(--color-text-muted);
+      line-height: 1.7;
+      margin-bottom: 1.8rem;
+    }
+
+    .booking-perks {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.7rem;
+    }
+
+    .booking-perks li {
+      display: flex;
+      align-items: center;
+      gap: 0.7rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+    }
+
+    .booking-perks li i {
+      color: var(--color-primary);
+      width: 16px;
+      flex-shrink: 0;
+    }
+
+    .booking-price {
+      display: flex;
+      align-items: baseline;
+      gap: 0.4rem;
+      flex-wrap: wrap;
+      padding: 1.5rem;
+      background: var(--color-bg-alt);
+      border: 1px solid var(--color-border);
+    }
+
+    .price-from {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .price-num {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.4rem;
+      font-weight: 700;
+      color: var(--color-primary);
+      line-height: 1;
+    }
+
+    .price-night {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: var(--color-text-muted);
+    }
+
+    .price-note {
+      width: 100%;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      color: var(--color-text-muted);
+      margin-top: 0.4rem;
+    }
+
+    /* Forma */
+    .booking-form-wrap {
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+    }
+
+    .booking-form {
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .form-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1rem;
+    }
+
+    .form-group {
+      display: flex;
+      flex-direction: column;
+      gap: 0.4rem;
+    }
+
+    .form-group label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      color: var(--color-text-muted);
+    }
+
+    .form-group input,
+    .form-group select,
+    .form-group textarea {
+      width: 100%;
+      padding: 0.75rem 0.9rem;
+      background: var(--color-bg);
+      border: 1px solid var(--color-border);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: var(--color-text);
+      outline: none;
+      transition: border-color 0.2s;
+      border-radius: 2px;
+      box-sizing: border-box;
+      -webkit-appearance: none;
+      appearance: none;
+    }
+
+    .form-group input:focus,
+    .form-group select:focus,
+    .form-group textarea:focus {
+      border-color: var(--color-primary);
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 90px;
+    }
+
+    .form-group select {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath fill='%23666' d='M6 8L0 0h12z'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: right 0.9rem center;
+      padding-right: 2.2rem;
+    }
+
+    .form-check {
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+      cursor: pointer;
+    }
+
+    .form-check input[type="checkbox"] {
+      width: 16px;
+      height: 16px;
+      accent-color: var(--color-primary);
+      flex-shrink: 0;
+      cursor: pointer;
+    }
+
+    .form-check label {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: var(--color-text-muted);
+      cursor: pointer;
+    }
+
+    @media (max-width: 900px) {
+      .booking-wrap {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-form {
+        padding: 1.5rem;
+      }
+    }
+
+    .section-dark .review-card {
+      background: rgba(255, 255, 255, 0.06);
+      border-color: rgba(255, 255, 255, 0.12);
+    }
+
+    .section-dark .review-text {
+      color: rgba(255, 255, 255, 0.85);
+    }
+
+    .section-dark .review-name {
+      color: #fff;
+    }
+
+    .section-dark .review-meta {
+      color: rgba(255, 255, 255, 0.5);
+    }
+
+    .section-dark .review-footer {
+      border-top-color: rgba(255, 255, 255, 0.12);
+    }
+
+    /* ============================================================
+       MAPA
+    ============================================================ */
+    .map-info-row {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.6rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .map-pill {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.45rem 0.9rem;
+      background: var(--color-surface);
+      border: 1px solid var(--color-border);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.8rem;
+      color: var(--color-text-muted);
+      border-radius: 2px;
+    }
+
+    .map-pill i {
+      color: var(--color-primary);
+      font-size: 0.75rem;
+    }
+
+    .map-embed {
+      border: 1px solid var(--color-border);
+      overflow: hidden;
+      line-height: 0;
+    }
+
+    .map-embed iframe {
+      display: block;
+      width: 100%;
+      height: 420px;
+    }
+
+    @media (max-width: 580px) {
+      .map-embed iframe {
+        height: 280px;
+      }
+    }
+
+    /* ============================================================
+       FOOTER
+    ============================================================ */
+    .footer {
+      background: #0a0a0a;
+      color: rgba(255, 255, 255, 0.75);
+      padding: 5rem 0 0;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.4fr 1fr 1.2fr;
+      gap: 3rem;
+      padding-bottom: 3.5rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      text-align: center;
+    }
+
+    .footer-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 0.8rem;
+    }
+
+    .footer-logo span {
+      color: var(--color-accent);
+    }
+
+    .footer-tagline {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      line-height: 1.7;
+      color: rgba(255, 255, 255, 0.6);
+      margin-bottom: 1.5rem;
+    }
+
+    .footer-social {
+      display: flex;
+      gap: 0.8rem;
+      justify-content: center;
+    }
+
+    .footer-social a {
+      width: 36px;
+      height: 36px;
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 0.95rem;
+      transition: background 0.2s, color 0.2s, border-color 0.2s;
+      text-decoration: none;
+      border-radius: 2px;
+    }
+
+    .footer-social a:hover {
+      background: rgba(255, 255, 255, 0.12);
+      color: #fff;
+      border-color: rgba(255, 255, 255, 0.4);
+    }
+
+    .footer-col-title {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: rgba(255, 255, 255, 0.4);
+      margin-bottom: 1.2rem;
+    }
+
+    .footer-links {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 0.55rem;
+    }
+
+    .footer-links a {
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.88rem;
+      color: rgba(255, 255, 255, 0.65);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-links a:hover {
+      color: #fff;
+    }
+
+    .footer-contact {
+      list-style: none;
+      padding: 0;
+      margin: 0 0 1.5rem;
+      display: flex;
+      flex-direction: column;
+      gap: 0.8rem;
+      align-items: center;
+    }
+
+    .footer-contact li {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.7rem;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      color: rgba(255, 255, 255, 0.65);
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .footer-contact li i {
+      color: var(--color-accent);
+      width: 14px;
+      flex-shrink: 0;
+      margin-top: 0.15rem;
+    }
+
+    .footer-contact a {
+      color: rgba(255, 255, 255, 0.65);
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+
+    .footer-contact a:hover {
+      color: #fff;
+    }
+
+    .footer-cta {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.7rem 1.4rem;
+      background: #25D366;
+      color: #fff;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.85rem;
+      font-weight: 600;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.15s;
+    }
+
+    .footer-cta:hover {
+      background: #1ebe5c;
+      transform: translateY(-1px);
+    }
+
+    .footer-col:last-child {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .footer-bottom {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 1.4rem 0;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      color: rgba(255, 255, 255, 0.35);
+      text-align: center;
+    }
+
+    @media (max-width: 900px) {
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        gap: 0.3rem;
+        text-align: center;
+      }
+    }
+
+    /* WhatsApp FAB */
+    .whatsapp-fab {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      z-index: 999;
+      width: 56px;
+      height: 56px;
+      border-radius: 50%;
+      background: var(--color-whatsapp);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.6rem;
+      box-shadow: 0 4px 16px rgba(37, 211, 102, 0.4);
+      text-decoration: none;
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .whatsapp-fab:hover {
+      transform: scale(1.1);
+      box-shadow: 0 6px 24px rgba(37, 211, 102, 0.5);
+    }
+
+    /* ============================================================
+       MOBILE FIXES — sve ispod 480px
+    ============================================================ */
+    @media (max-width: 480px) {
+
+      /* Globalno */
+      .container {
+        padding: 0 1rem;
+      }
+
+      .section {
+        padding: 3rem 0;
+      }
+
+      .section-title {
+        font-size: 1.8rem;
+      }
+
+      .section-subtitle {
+        font-size: 0.95rem;
+      }
+
+      .btn {
+        padding: 0.8rem 1.4rem;
+        font-size: 0.85rem;
+      }
+
+      /* Hero */
+      .hero-title {
+        font-size: clamp(2rem, 10vw, 3rem);
+      }
+
+      .hero-subtitle {
+        font-size: 0.9rem;
+      }
+
+      .hero-cta {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+      }
+
+      .hero-scroll {
+        bottom: 2rem;
+      }
+
+      /* Social proof bar */
+      .social-proof {
+        gap: 1rem;
+        padding: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+      }
+
+      .proof-divider {
+        display: none;
+      }
+
+      /* O apartmanu */
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .about-img-wrap {
+        height: 260px;
+      }
+
+      .about-img {
+        height: 260px;
+      }
+
+      /* Galerija preview */
+      .gallery-preview {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 150px 150px;
+      }
+
+      .gallery-preview .gallery-item--wide {
+        grid-column: span 2;
+        grid-row: span 1;
+      }
+
+      .gallery-expand-btn span {
+        font-size: 0.72rem;
+      }
+
+      /* Gallery tabs */
+      .gallery-tabs {
+        gap: 0.4rem;
+      }
+
+      .gallery-tab {
+        padding: 0.45rem 0.8rem;
+        font-size: 0.75rem;
+      }
+
+      /* Gallery grid */
+      .gallery-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .gallery-item--wide {
+        grid-column: span 2;
+      }
+
+      /* Amenitiji */
+      .amenities-grid {
+        grid-template-columns: 1fr;
+      }
+
+      /* Booking */
+      .booking-wrap {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+      }
+
+      .form-row {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-form {
+        padding: 1.25rem;
+      }
+
+      .price-num {
+        font-size: 2rem;
+      }
+
+      /* Reviews carousel cards */
+      .review-card {
+        width: 280px;
+        padding: 1.5rem;
+      }
+
+      .review-text {
+        font-size: 0.95rem;
+      }
+
+      /* FAQ */
+      .faq-question {
+        font-size: 0.88rem;
+      }
+
+      .faq-answer-inner {
+        font-size: 0.84rem;
+      }
+
+      /* Mapa */
+      .map-info-row {
+        gap: 0.4rem;
+      }
+
+      .map-pill {
+        font-size: 0.72rem;
+        padding: 0.35rem 0.7rem;
+      }
+
+      .map-embed iframe {
+        height: 240px;
+      }
+
+      /* Footer */
+      .footer {
+        padding: 3rem 0 0;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+      }
+
+      .footer-brand {
+        grid-column: auto;
+      }
+
+      .footer-logo {
+        font-size: 1.3rem;
+      }
+
+      .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+        gap: 0.3rem;
+      }
+
+      /* WhatsApp FAB */
+      .whatsapp-fab {
+        bottom: 1.2rem;
+        right: 1.2rem;
+        width: 50px;
+        height: 50px;
+        font-size: 1.4rem;
+      }
+    }
+
+    /* Tablet fixes 481px–768px */
+    @media (min-width: 481px) and (max-width: 768px) {
+      .about-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .booking-wrap {
+        grid-template-columns: 1fr;
+      }
+
+      .gallery-preview {
+        grid-template-columns: 2fr 1fr 1fr;
+        grid-template-rows: 200px 200px;
+      }
+
+      .footer-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .footer-brand {
+        grid-column: 1 / -1;
+      }
+    }
+
+    /* ============================================================
+       FLATPICKR THEME CUSTOMIZATION
+    ============================================================ */
+    .flatpickr-calendar {
+      background: var(--color-surface) !important;
+      border: 1px solid var(--color-border) !important;
+      box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15) !important;
+      font-family: 'DM Sans', sans-serif !important;
+      color: var(--color-text) !important;
+    }
+    .flatpickr-calendar .flatpickr-months .flatpickr-month {
+      background: transparent !important;
+      color: var(--color-text) !important;
+    }
+    .flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months {
+      color: var(--color-text) !important;
+      font-family: 'DM Sans', sans-serif !important;
+      font-weight: 500;
+    }
+    .flatpickr-calendar .flatpickr-current-month input.numInput.cur-year {
+      color: var(--color-text) !important;
+      font-family: 'DM Sans', sans-serif !important;
+    }
+    .flatpickr-calendar .flatpickr-current-month .numInputWrapper span.arrowUp::after {
+      border-bottom-color: var(--color-text) !important;
+    }
+    .flatpickr-calendar .flatpickr-current-month .numInputWrapper span.arrowDown::after {
+      border-top-color: var(--color-text) !important;
+    }
+    .flatpickr-calendar .flatpickr-months .flatpickr-prev-month,
+    .flatpickr-calendar .flatpickr-months .flatpickr-next-month {
+      color: var(--color-text) !important;
+      fill: var(--color-text) !important;
+    }
+    .flatpickr-calendar .flatpickr-months .flatpickr-prev-month:hover,
+    .flatpickr-calendar .flatpickr-months .flatpickr-next-month:hover {
+      color: var(--color-primary) !important;
+    }
+    .flatpickr-calendar span.flatpickr-weekday {
+      color: var(--color-text-muted) !important;
+      font-weight: 500 !important;
+    }
+    .flatpickr-calendar .flatpickr-day {
+      color: var(--color-text) !important;
+      border-radius: 4px !important;
+      transition: all 0.2s ease;
+    }
+    .flatpickr-calendar .flatpickr-day:hover,
+    .flatpickr-calendar .flatpickr-day:focus {
+      background: var(--color-bg-alt) !important;
+      border-color: var(--color-bg-alt) !important;
+      color: var(--color-text) !important;
+    }
+    .flatpickr-calendar .flatpickr-day.selected,
+    .flatpickr-calendar .flatpickr-day.selected:hover,
+    .flatpickr-calendar .flatpickr-day.selected:focus {
+      background: var(--color-primary) !important;
+      border-color: var(--color-primary) !important;
+      color: var(--color-cta-text) !important;
+      font-weight: 600;
+    }
+    .flatpickr-calendar .flatpickr-day.today {
+      border-color: var(--color-accent) !important;
+      background: transparent !important;
+      color: var(--color-text) !important;
+    }
+    .flatpickr-calendar .flatpickr-day.today:hover {
+      background: var(--color-bg-alt) !important;
+      color: var(--color-text) !important;
+    }
+    .flatpickr-calendar .flatpickr-day.flatpickr-disabled,
+    .flatpickr-calendar .flatpickr-day.flatpickr-disabled:hover {
+      color: var(--color-text-muted) !important;
+      opacity: 0.3 !important;
+      background: transparent !important;
+      border-color: transparent !important;
+    }
+    .flatpickr-calendar .flatpickr-day.prevMonthDay,
+    .flatpickr-calendar .flatpickr-day.nextMonthDay {
+      color: var(--color-text-muted) !important;
+      opacity: 0.5;
+    }
+    .flatpickr-calendar.arrowTop::before { border-bottom-color: var(--color-border) !important; }
+    .flatpickr-calendar.arrowTop::after { border-bottom-color: var(--color-surface) !important; }
+    .flatpickr-calendar.arrowBottom::before { border-top-color: var(--color-border) !important; }
+    .flatpickr-calendar.arrowBottom::after { border-top-color: var(--color-surface) !important; }
+  </style>
+</head>
+
+<body>
+
+  <!-- THEME SWITCHER (prezentacija) -->
+  <div class="theme-switcher">
+    <button class="theme-btn" data-t="emerald" title="Emerald Escape"></button>
+    <button class="theme-btn" data-t="luxury" title="Luxury Modern"></button>
+    <button class="theme-btn" data-t="rustic" title="Rustic & Cozy"></button>
+  </div>
+
+  <!-- NAV -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo" data-i18n="nav-logo">Apartment Antonia</a>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#o-apartmanu" data-i18n="nav-about">O apartmanu</a></li>
+      <li><a href="#galerija" data-i18n="nav-gallery">Galerija</a></li>
+      <li><a href="#amenitiji" data-i18n="nav-amenities">Sadržaji</a></li>
+      <li><a href="#recenzije" data-i18n="nav-reviews">Recenzije</a></li>
+      <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
+      <li><a href="#mapa" data-i18n="nav-map">Lokacija</a></li>
+      <li><a href="#rezervacija" class="nav-cta" data-i18n="nav-book">Rezerviraj</a></li>
+
+      <!-- LANG SWITCHER -->
+      <li class="lang-switch-wrap">
+        <button id="langToggle" class="lang-btn">
+          <span class="lang-opt active" data-lang="hr">HR</span>
+          <span class="lang-sep">|</span>
+          <span class="lang-opt" data-lang="en">EN</span>
+        </button>
+      </li>
+    </ul>
+    <button class="nav-toggle" id="navToggle" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero" id="pocetna">
+    <div class="hero-bg"></div>
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+      <p class="hero-eyebrow" data-i18n="hero-eyebrow">Podbablje · Imotski · 30 km od mora</p>
+      <h1>Luxury Apartment<br><em data-i18n="hero-title">Antonia</em></h1>
+      <p class="hero-sub" data-i18n="hero-sub">Privatna oaza za 3 gosta · Etno konoba · Dvorište · Roštilj</p>
+      <div class="hero-btns">
+        <a href="#rezervacija" class="btn btn-primary" data-i18n="hero-btn-book">
+          <i class="fa-brands fa-whatsapp"></i> Rezerviraj izravno
+        </a>
+        <a href="#galerija" class="btn btn-outline" data-i18n="hero-btn-gallery">
+          <i class="fa-regular fa-images"></i> Pogledaj galeriju
+        </a>
+      </div>
+    </div>
+
+    <a href="#o-apartmanu" class="hero-scroll">
+      <span data-i18n="hero-scroll">Pomakni</span>
+      <i class="fa-solid fa-chevron-down"></i>
+    </a>
+  </section>
+
+  <!-- SOCIAL PROOF BAR -->
+  <div class="proof-bar">
+    <div class="proof-bar-inner">
+      <div class="proof-item">
+        <i class="fa-solid fa-star"></i>
+        <span data-i18n="proof-rating">Ocjena 5.0 ⭐</span>
+      </div>
+      <div class="proof-sep"></div>
+      <div class="proof-item">
+        <i class="fa-solid fa-paw"></i>
+        <span data-i18n="proof-pets">Kućni ljubimci dobrodošli</span>
+      </div>
+      <div class="proof-sep"></div>
+      <div class="proof-item">
+        <i class="fa-solid fa-car"></i>
+        <span data-i18n="proof-parking">Besplatan Parking</span>
+      </div>
+      <div class="proof-sep"></div>
+      <div class="proof-item">
+        <i class="fa-solid fa-umbrella-beach"></i>
+        <span data-i18n="proof-sea">30km do mora</span>
+      </div>
+      <div class="proof-sep"></div>
+      <div class="proof-item">
+        <i class="fa-solid fa-comment-dots"></i>
+        <span data-i18n="proof-reply">Odgovor u roku od 1h</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- O APARTMANU -->
+  <section class="section" id="o-apartmanu">
+    <div class="container about-grid">
+      <div class="about-img-wrap">
+        <img src="images/dnevni1.jpg" alt="Apartman Antonia" class="about-img" />
+        <div class="about-img-badge">
+          <span class="about-badge-num">2+</span>
+          <span class="about-badge-txt" data-i18n="about-exp">godine<br>iskustva</span>
+        </div>
+      </div>
+      <div class="about-text">
+        <p class="eyebrow" data-i18n="about-eyebrow">O apartmanu</p>
+        <div class="divider"></div>
+        <h2 class="section-title" data-i18n="about-title">Više od apartmana —<br><em>doživljaj</em></h2>
+        <p class="about-desc" data-i18n="about-desc">Opustite se u ugodnom i moderno uređenom smještaju, smještenom
+          svega 30 km od mora. Na
+          raspolaganju su vam privatni ulaz, potpuno opremljena kuhinja, dnevni boravak, spavaća soba i kupaonica. <br>
+          Uživajte u privatnom dvorištu, vanjskom roštilju te prostoriji za zabavu sa zvučnim i svjetlosnim efektima.
+          Idealan izbor za parove koji traže mir, privatnost i potpuni odmor.</p>
+        <ul class="about-list">
+          <li><i class="fa-solid fa-check"></i> <span data-i18n="about-list-1">Okružen prirodom i šumom,</span></li>
+          <li><i class="fa-solid fa-check"></i> <span data-i18n="about-list-2">udaljen svega 3 km od rijeke,</span></li>
+          <li><i class="fa-solid fa-check"></i> <span data-i18n="about-list-3">7 km od jezera i 30 km od mora.</span>
+          </li>
+          <li><i class="fa-solid fa-check"></i> <span data-i18n="about-list-4">Restoran 400 m, dućan 1 km.</span></li>
+        </ul>
+        <a href="#rezervacija" class="btn btn-primary" style="margin-top:2rem;" data-i18n="about-btn">
+          <i class="fa-brands fa-whatsapp"></i> Provjeri dostupnost
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALERIJA -->
+  <section class="section section-alt" id="galerija">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" data-i18n="gallery-eyebrow">Fotografije</p>
+        <div class="divider"></div>
+        <h2 class="section-title" data-i18n="gallery-title">Istražite prostor</h2>
+        <p class="section-subtitle" data-i18n="gallery-subtitle">Moderni apartman na gornjem katu i autentična etno
+          konoba u prizemlju.</p>
+      </div>
+
+      <!-- PREVIEW GRID (5 slika) -->
+      <div class="gallery-preview" id="galleryPreview">
+        <div class="gp-main">
+          <img src="images/dnevni2.jpg" alt="Dnevni boravak" loading="lazy" />
+        </div>
+        <div class="gp-grid">
+          <div class="gp-cell">
+            <img src="images/kupaonica4.jpg" alt="Kupaonica" loading="lazy" />
+          </div>
+          <div class="gp-cell">
+            <img src="images/kuhinja1.jpg" alt="Kuhinja" loading="lazy" />
+          </div>
+          <div class="gp-cell">
+            <img src="images/exterior1.jpg" alt="Eksterijer" loading="lazy" />
+          </div>
+          <div class="gp-cell gp-last">
+            <img src="images/dodatno1.jpg" alt="Više" loading="lazy" />
+            <button class="gallery-expand-btn" id="galleryExpandBtn">
+              <i class="fa-solid fa-table-cells"></i>
+              <span data-i18n="gal-show-all">Prikaži sve fotografije</span>
+            </button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FULL GALLERY (skrivena, otvara se expand) -->
+      <div class="gallery-full" id="galleryFull">
+        <div class="gallery-tabs">
+          <button class="gallery-tab active" data-filter="all" data-i18n="gal-filter-all">Sve</button>
+          <button class="gallery-tab" data-filter="dnevni" data-i18n="gal-filter-living">Dnevni boravak</button>
+          <button class="gallery-tab" data-filter="kuhinja" data-i18n="gal-filter-kitchen">Kuhinja</button>
+          <button class="gallery-tab" data-filter="trpezarija" data-i18n="gal-filter-dining">Trpezarija</button>
+          <button class="gallery-tab" data-filter="spavaca" data-i18n="gal-filter-bed">Spavaća soba</button>
+          <button class="gallery-tab" data-filter="kupaonica" data-i18n="gal-filter-bath">Kupaonica</button>
+          <button class="gallery-tab" data-filter="eksterijer" data-i18n="gal-filter-ext">Eksterijer</button>
+          <button class="gallery-tab" data-filter="dodatno" data-i18n="gal-filter-more">Dodatno</button>
+        </div>
+        <div class="gallery-grid">
+          <div class="gallery-item gallery-item--wide" data-cat="dnevni"><img src="images/dnevni1.jpg"
+              alt="Dnevni boravak" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dnevni"><img src="images/dnevni2.jpg" alt="Dnevni boravak"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dnevni"><img src="images/dnevni3.jpg" alt="Dnevni boravak"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dnevni"><img src="images/dnevni4.jpg" alt="Dnevni boravak"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dnevni"><img src="images/dnevni5.jpg" alt="Dnevni boravak"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item gallery-item--wide" data-cat="kuhinja"><img src="images/kuhinja1.jpg" alt="Kuhinja"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="kuhinja"><img src="images/kuhinja2.jpg" alt="Kuhinja" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="kuhinja"><img src="images/kuhinja3.jpg" alt="Kuhinja" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="kuhinja"><img src="images/kuhinja4.jpg" alt="Kuhinja" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="kuhinja"><img src="images/kuhinja5.jpg" alt="Kuhinja" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item gallery-item--wide" data-cat="trpezarija"><img src="images/trpezarija1.jpg"
+              alt="Trpezarija" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="trpezarija"><img src="images/trpezarija2.jpg" alt="Trpezarija"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="trpezarija"><img src="images/trpezarija3.jpg" alt="Trpezarija"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="trpezarija"><img src="images/trpezarija4.jpg" alt="Trpezarija"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item gallery-item--wide" data-cat="spavaca"><img src="images/soba1.jpg" alt="Spavaća soba"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="spavaca"><img src="images/soba2.jpg" alt="Spavaća soba" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item gallery-item--wide" data-cat="kupaonica"><img src="images/kupaonica1.jpg"
+              alt="Kupaonica" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="kupaonica"><img src="images/kupaonica2.jpg" alt="Kupaonica"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="kupaonica"><img src="images/kupaonica3.jpg" alt="Kupaonica"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="kupaonica"><img src="images/kupaonica4.jpg" alt="Kupaonica"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item gallery-item--wide" data-cat="eksterijer"><img src="images/exterior1.jpg"
+              alt="Eksterijer" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="eksterijer"><img src="images/exterior2.jpg" alt="Eksterijer"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="eksterijer"><img src="images/exterior3.jpg" alt="Eksterijer"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="eksterijer"><img src="images/exterior4.jpg" alt="Eksterijer"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="eksterijer"><img src="images/exterior5.jpg" alt="Eksterijer"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="eksterijer"><img src="images/exterior6.jpg" alt="Eksterijer"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item gallery-item--wide" data-cat="dodatno"><img src="images/dodatno1.jpg" alt="Dodatno"
+              loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dodatno"><img src="images/dodatno2.jpg" alt="Dodatno" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dodatno"><img src="images/dodatno3.jpg" alt="Dodatno" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dodatno"><img src="images/dodatno4.jpg" alt="Dodatno" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dodatno"><img src="images/dodatno5.jpg" alt="Dodatno" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dodatno"><img src="images/dodatno6.jpg" alt="Dodatno" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dodatno"><img src="images/dodatno7.jpg" alt="Dodatno" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dodatno"><img src="images/dodatno8.jpg" alt="Dodatno" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dodatno"><img src="images/dodatno9.jpg" alt="Dodatno" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dodatno"><img src="images/dodatno10.jpg" alt="Dodatno" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+          <div class="gallery-item" data-cat="dodatno"><img src="images/dodatno11.jpg" alt="Dodatno" loading="lazy" />
+            <div class="gallery-overlay"><i class="fa-solid fa-magnifying-glass-plus"></i></div>
+          </div>
+        </div>
+        <div style="text-align:center; margin-top:1.5rem;">
+          <button class="btn btn-outline" id="galleryCollapseBtn">
+            <i class="fa-solid fa-chevron-up"></i> Sakrij galeriju
+          </button>
+        </div>
+      </div>
+
+    </div><!-- /container -->
+    <div style="display:block; width:100%; text-align:center; padding: 2.5rem 0 0.5rem; position:relative; z-index:1;">
+      <a href="#rezervacija" class="btn btn-primary">
+        <i class="fa-brands fa-whatsapp"></i> Sviđa mi se — Rezerviraj!
+      </a>
+    </div>
+  </section>
+
+  <!-- AMENITIJI -->
+  <section class="section" id="amenitiji">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" data-i18n="am-eyebrow">Što je uključeno</p>
+        <div class="divider"></div>
+        <h2 class="section-title" data-i18n="am-title">Sadržaji</h2>
+        <p class="section-subtitle" data-i18n="am-sub">Sve što vam je potrebno za ugodan boravak — i više od toga.</p>
+      </div>
+      <div class="amenities-grid">
+
+        <div class="amenity-group">
+          <h4 class="amenity-group-title"><i class="fa-solid fa-bath"></i> <span
+              data-i18n="am-bath-title">Kupaonica</span></h4>
+          <ul class="amenity-list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bath-1">Sušilo za kosu</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bath-2">Šampon i regenerator</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bath-3">Gel za tuširanje</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bath-4">Sapun i toaletni papir</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bath-5">Topla voda</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bath-6">Sredstva za čišćenje</span></li>
+          </ul>
+        </div>
+
+        <div class="amenity-group">
+          <h4 class="amenity-group-title"><i class="fa-solid fa-bed"></i> <span data-i18n="am-bed-title">Spavaća
+              soba</span></h4>
+          <ul class="amenity-list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bed-1">Posteljina i ručnici</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bed-2">Dodatni jastuci i pokrivači</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bed-3">Zavjese za zamračivanje</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bed-4">Glačalo i vješalice</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bed-5">Ormar i sef</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bed-6">Mreža protiv komaraca</span></li>
+          </ul>
+        </div>
+
+        <div class="amenity-group">
+          <h4 class="amenity-group-title"><i class="fa-solid fa-tv"></i> <span data-i18n="am-ent-title">Zabava</span>
+          </h4>
+          <ul class="amenity-list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-ent-1">TV</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-ent-2">Zvučni sustav</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-ent-3">Gramofon</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-ent-4">Knjige</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-ent-5">Društvene igre</span></li>
+          </ul>
+        </div>
+
+        <div class="amenity-group">
+          <h4 class="amenity-group-title"><i class="fa-solid fa-temperature-half"></i> <span
+              data-i18n="am-ac-title">Grijanje i hlađenje</span></h4>
+          <ul class="amenity-list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-ac-1">Klima uređaj</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-ac-2">Grijanje</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-ac-3">Prijenosni ventilatori</span></li>
+          </ul>
+        </div>
+
+        <div class="amenity-group">
+          <h4 class="amenity-group-title"><i class="fa-solid fa-kitchen-set"></i> <span
+              data-i18n="am-kit-title">Kuhinja</span></h4>
+          <ul class="amenity-list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-kit-1">Potpuno opremljena kuhinja</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-kit-2">Hladnjak i zamrzivač</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-kit-3">Pećnica i mikrovalna pećnica</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-kit-4">Perilica posuđa</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-kit-5">Aparat za kavu i toster</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-kit-6">Pribor za roštilj</span></li>
+          </ul>
+        </div>
+
+        <div class="amenity-group">
+          <h4 class="amenity-group-title"><i class="fa-solid fa-tree"></i> <span data-i18n="am-out-title">Vanjski
+              prostor</span></h4>
+          <ul class="amenity-list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-out-1">Privatno dvorište</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-out-2">Roštilj</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-out-3">Vanjska kuhinja</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-out-4">Vanjski prostor za sjedenje</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-out-5">Ognjište</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-out-6">Bicikli</span></li>
+          </ul>
+        </div>
+
+        <div class="amenity-group">
+          <h4 class="amenity-group-title"><i class="fa-solid fa-wifi"></i> <span
+              data-i18n="am-gen-title">Općenito</span></h4>
+          <ul class="amenity-list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-gen-1">Besplatan WiFi</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-gen-2">Besplatan parking</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-gen-3">Privatni ulaz</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-gen-4">Perilica rublja</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-gen-5">Vatrogasni aparat</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-gen-6">Kutija prve pomoći</span></li>
+          </ul>
+        </div>
+
+        <div class="amenity-group">
+          <h4 class="amenity-group-title"><i class="fa-solid fa-heart"></i> <span
+              data-i18n="am-spec-title">Posebno</span></h4>
+          <ul class="amenity-list">
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-spec-1">Dopušteni kućni ljubimci</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-spec-2">Dopušteno pušenje</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-spec-3">Dobrodošli dugi boravci</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-spec-4">Čišćenje na zahtjev</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-spec-5">Pohrana prtljage</span></li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOOKING FORMA -->
+  <section class="section section-alt" id="rezervacija">
+    <div class="container">
+      <div class="booking-wrap">
+        <div class="booking-info">
+          <p class="eyebrow" data-i18n="book-eyebrow">Izravna rezervacija</p>
+          <div class="divider"></div>
+          <h2 class="section-title" data-i18n="book-title">Rezervirajte bez<br><em>provizije</em></h2>
+          <p class="booking-desc" data-i18n="book-desc">Pošaljite svoj upit putem WhatsAppa. Odgovor u roku od 1 sat.
+          </p>
+          <ul class="booking-perks">
+            <li><i class="fa-solid fa-tag"></i> <span data-i18n="book-perk-1">Izravna rezervacija</span></li>
+            <li><i class="fa-solid fa-clock"></i> <span data-i18n="book-perk-2">Odgovor u roku od 1h</span></li>
+            <li><i class="fa-solid fa-calendar-check"></i> <span data-i18n="book-perk-3">Fleksibilna prijava</span></li>
+            <li><i class="fa-solid fa-paw"></i> <span data-i18n="book-perk-4">Ljubimci dobrodošli</span></li>
+          </ul>
+          <div class="booking-price">
+            <span class="price-from" data-i18n="book-price-from">Od</span>
+            <span class="price-num">70€</span>
+            <span class="price-night" data-i18n="book-price-night">/ noćenju</span>
+            <p class="price-note" data-i18n="book-price-note">Minimalno 4 noćenja · Cijena se potvrđuje na upit</p>
+          </div>
+        </div>
+
+        <div class="booking-form-wrap">
+          <div class="booking-form">
+            <div class="form-row">
+              <div class="form-group">
+                <label for="checkin" data-i18n="form-checkin">Prijava</label>
+                <input type="text" id="checkin" name="checkin" autocomplete="off" placeholder="dd/mm/yyyy" />
+              </div>
+              <div class="form-group">
+                <label for="checkout" data-i18n="form-checkout">Odjava</label>
+                <input type="text" id="checkout" name="checkout" autocomplete="off" placeholder="dd/mm/yyyy" />
+              </div>
+            </div>
+
+            <div class="form-nights" id="nightsDisplay" style="display:none;">
+              <i class="fa-solid fa-moon"></i>
+              <span id="nightsText"></span>
+            </div>
+
+            <div class="form-row">
+              <div class="form-group">
+                <label for="ime" data-i18n="form-name-label">Ime i prezime</label>
+                <input type="text" id="ime" placeholder="Vaše ime" data-i18n-placeholder="form-name-ph" />
+              </div>
+              <div class="form-group">
+                <label for="gosti" data-i18n="form-guests-label">Broj gostiju</label>
+                <select id="gosti">
+                  <option value="1" data-i18n="form-guest-1">1 gost</option>
+                  <option value="2" data-i18n="form-guest-2">2 gosta</option>
+                  <option value="3" data-i18n="form-guest-3">3 gosta</option>
+                </select>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="email" data-i18n="form-email-label">Email (opciono)</label>
+              <input type="email" id="email" placeholder="vasa@email.com" data-i18n-placeholder="form-email-ph" />
+            </div>
+
+            <div class="form-group">
+              <label for="napomena" data-i18n="form-note-label">Napomena</label>
+              <textarea id="napomena" rows="3" placeholder="Posebni zahtjevi, pitanja..."
+                data-i18n-placeholder="form-note-ph"></textarea>
+            </div>
+
+            <div class="form-check">
+              <input type="checkbox" id="ljubimac" />
+              <label for="ljubimac" data-i18n="form-pet-label">🐾 Donosim kućnog ljubimca</label>
+            </div>
+
+            <div class="form-error" id="formError"></div>
+
+            <button class="btn btn-whatsapp" id="sendWhatsApp" data-i18n="form-btn">
+              <i class="fa-brands fa-whatsapp"></i> Pošalji upit na WhatsApp
+            </button>
+            <p class="form-note" data-i18n="form-reply-note">Antonia odgovara u roku od 1 sata</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- RECENZIJE -->
+  <section class="section section-dark" id="recenzije">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" data-i18n="rev-eyebrow">Što kažu gosti</p>
+        <div class="divider"></div>
+        <h2 class="section-title" data-i18n="rev-title">Recenzije</h2>
+        <p class="section-subtitle" data-i18n="rev-sub">Ocjena 5.0 ⭐ · Gosti se uvijek rado vraćaju</p>
+      </div>
+
+      <div class="reviews-carousel-wrap">
+        <div class="reviews-track" id="reviewsTrack">
+
+          <div class="review-card">
+            <span class="review-quote-icon">"</span>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">Prekrasan bijeg od gradskog života. Etno konoba je nešto posebno — večerali smo uz
+              svijeće i glazbu, kao da smo se vratili u prošlost. Sigurno ćemo se vratiti!</p>
+            <div class="review-footer">
+              <div class="review-author">
+                <span class="review-name">Maja K. 🇭🇷</span>
+                <span class="review-meta">Srpanj 2024. · 5 noćenja</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <span class="review-quote-icon">"</span>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">Apartman je prekrasno uređen, besprijekorno čist i prostran. Domaćica je bila
+              nevjerojatno ljubazna i odgovorila je na svako pitanje u roku od nekoliko minuta. Okruženje je mirno, a
+              priroda predivna.</p>
+            <div class="review-footer">
+              <div class="review-author">
+                <span class="review-name">Thomas B. 🇩🇪</span>
+                <span class="review-meta">Kolovoz 2024. · 7 noćenja</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <span class="review-quote-icon">"</span>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">Roštilj u dvorištu, tišina, zvjezdano nebo — upravo ono što smo tražili. Djeca su
+              obožavala konobu sa svojim igrama i svjetlosnim/zvučnim efektima. Savršeno za obitelji ili parove.</p>
+            <div class="review-footer">
+              <div class="review-author">
+                <span class="review-name">Ana & Petar S. 🇷🇸</span>
+                <span class="review-meta">Lipanj 2024. · 6 noćenja</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="review-card">
+            <span class="review-quote-icon">"</span>
+            <div class="review-stars">
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <p class="review-text">Mir i tišina kakvu dugo nisam doživio. Dvorište je savršeno za jutarnju kavu, a
+              konoba za večernje opuštanje. Preporučujem svima koji bježe od gradske buke.</p>
+            <div class="review-footer">
+              <div class="review-author">
+                <span class="review-name">Luca M. 🇮🇹</span>
+                <span class="review-meta">Kolovoz 2024. · 5 noćenja</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section class="section" id="faq">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" data-i18n="faq-eyebrow">Imate pitanja?</p>
+        <div class="divider"></div>
+        <h2 class="section-title" data-i18n="faq-title">FAQ</h2>
+        <p class="section-subtitle" data-i18n="faq-sub">Sve što trebate znati prije dolaska.</p>
+      </div>
+
+      <div class="faq-list">
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq-q1">Koji je minimalni broj noći?</span>
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-inner" data-i18n="faq-a1">Minimalni boravak je 4 noći. Za duže boravke (tjedan i više)
+              možete se dogovoriti za povoljniju cijenu direktno putem WhatsAppa.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq-q2">Kako se vrši prijava (check-in)?</span>
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-inner" data-i18n="faq-a2">Check-in je fleksibilan i dogovara se direktno. Checkout je
+              do 10:00. Apartman ima zaseban ulaz pa imate potpunu privatnost.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq-q3">Je li parking besplatan?</span>
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-inner" data-i18n="faq-a3">Da, besplatan privatni parking je dostupan direktno uz
+              apartman. Nema ograničenja ni naplate.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq-q4">Mogu li doći s kućnim ljubimcem?</span>
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-inner" data-i18n="faq-a4">Da! Kućni ljubimci su dobrodošli. Privatno dvorište je
+              idealno za šetnju. Samo naznačite u upitu da donosite ljubimca.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq-q5">Što je etno konoba?</span>
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-inner" data-i18n="faq-a5">Etno konoba je posebna zabavna prostorija u prizemlju s
+              kamenim zidovima, hrastovim stolom i klupama, TV-om, mini barom i hladnjakom s pićima. Ima zvučne i
+              svjetlosne efekte — idealna za večernje druženje.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq-q6">Koliko je daleko more?</span>
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-inner" data-i18n="faq-a6">Makarska rivijera je oko 30 km (otprilike 30 minuta vožnje).
+              U blizini su i rijeka (3 km) i jezero (7 km) za kupanje u prirodi.</p>
+          </div>
+        </div>
+
+        <div class="faq-item">
+          <button class="faq-question">
+            <span data-i18n="faq-q7">Kako rezervirati direktno?</span>
+            <span class="faq-icon"><i class="fa-solid fa-plus"></i></span>
+          </button>
+          <div class="faq-answer">
+            <p class="faq-answer-inner" data-i18n="faq-a7">Ispunite formu na ovoj stranici i upit će otići direktno na
+              WhatsApp. Kontakt je direktan, cijena niža, a odgovor stiže u roku od 1 sat.</p>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- WhatsApp FAB -->
+  <!-- MAPA -->
+  <section class="section section-alt" id="mapa">
+    <div class="container">
+      <div class="section-header">
+        <p class="eyebrow" data-i18n="map-eyebrow">Kako doći do nas</p>
+        <div class="divider"></div>
+        <h2 class="section-title" data-i18n="map-title">Lokacija</h2>
+        <p class="section-subtitle" data-i18n="map-sub">Podbablje Gornje, Imotski · 30 km do mora · Besplatan parking
+        </p>
+      </div>
+      <div class="map-info-row">
+        <div class="map-pill"><i class="fa-solid fa-location-dot"></i> <span data-i18n="map-pill-1">Podbablje Gornje,
+            Imotski, HR</span></div>
+        <div class="map-pill"><i class="fa-solid fa-car"></i> <span data-i18n="map-pill-2">30 km do Makarske
+            rivijere</span></div>
+        <div class="map-pill"><i class="fa-solid fa-water"></i> <span data-i18n="map-pill-3">7 km do jezera</span></div>
+        <div class="map-pill"><i class="fa-solid fa-p"></i> <span data-i18n="map-pill-4">Besplatan privatni
+            parking</span></div>
+      </div>
+      <div class="map-embed">
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d11598.026779428581!2d17.18128330761214!3d43.404414605963286!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x134adde399ff0ba9%3A0x2d77134d8493d174!2sDr.%20Ante%20Star%C4%8Devi%C4%87a%209%2C%2021260%2C%20Podbablje%20Gornje!5e0!3m2!1shr!2shr!4v1717527632681!5m2!1shr!2shr"
+          width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+          title="Apartment Antonia – Dr. Ante Starčevića 9, Podbablje Gornje">
+        </iframe>
+      </div>
+      <div style="text-align:center; margin-top:1rem;">
+        <a href="https://www.google.com/maps/place/Dr.+Ante+Star%C4%8Devi%C4%87a+9,+21260,+Podbablje+Gornje/@43.4044016,17.1909209,206m/data=!3m1!1e3!4m6!3m5!1s0x134adde399ff0ba9:0x2d77134d8493d174!8m2!3d43.4044338!4d17.1909257!16s%2Fg%2F11rqxy04nb?hl=hr"
+          target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.85rem; padding:0.65rem 1.6rem;">
+          <i class="fa-solid fa-diamond-turn-right"></i> Navigiraj — Google Maps
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer" id="kontakt">
+    <div class="container">
+      <div class="footer-grid">
+
+        <div class="footer-col footer-brand">
+          <p class="footer-logo" data-i18n="nav-logo">Apartment <span>Antonia</span></p>
+          <p class="footer-tagline" data-i18n="footer-tagline">Vaše utočište u srcu Dalmatinske zagore.<br>Luksuz,
+            priroda i toplina doma.</p>
+          <div class="footer-social">
+            <a href="https://wa.me/385915575156" target="_blank" aria-label="WhatsApp"><i
+                class="fa-brands fa-whatsapp"></i></a>
+            <a href="mailto:tona0009@icloud.com" aria-label="Email"><i class="fa-solid fa-envelope"></i></a>
+          </div>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title" data-i18n="footer-links">Brzi linkovi</p>
+          <ul class="footer-links">
+            <li><a href="#o-apartmanu" data-i18n="nav-about">O apartmanu</a></li>
+            <li><a href="#galerija" data-i18n="nav-gallery">Galerija</a></li>
+            <li><a href="#amenitiji" data-i18n="nav-amenities">Sadržaji</a></li>
+            <li><a href="#rezervacija" data-i18n="nav-book">Rezerviraj</a></li>
+            <li><a href="#recenzije" data-i18n="nav-reviews">Recenzije</a></li>
+            <li><a href="#faq" data-i18n="nav-faq">FAQ</a></li>
+            <li><a href="#mapa" data-i18n="nav-map">Lokacija</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <p class="footer-col-title" data-i18n="footer-contact">Kontakt</p>
+          <ul class="footer-contact">
+            <li>
+              <i class="fa-solid fa-location-dot"></i>
+              <span data-i18n="footer-addr">Podbablje Gornje<br>Imotski, Hrvatska</span>
+            </li>
+            <li>
+              <i class="fa-brands fa-whatsapp"></i>
+              <a href="https://wa.me/385915575156" target="_blank">+385 91 557 5156</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:tona0009@icloud.com">tona0009@icloud.com</a>
+            </li>
+            <li>
+              <i class="fa-solid fa-clock"></i>
+              <span data-i18n="footer-reply">Odgovor u roku od 1 sata</span>
+            </li>
+          </ul>
+          <a href="https://wa.me/385915575156" target="_blank" class="footer-cta" data-i18n="footer-btn">
+            <i class="fa-brands fa-whatsapp"></i> Pošalji upit
+          </a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p data-i18n="footer-copy">© 2025 Apartment Antonia · Podbablje Gornje, Hrvatska</p>
+      </div>
+    </div>
+  </footer>
+
+  <a href="https://wa.me/385915575156" target="_blank" class="whatsapp-fab" aria-label="WhatsApp">
+    <i class="fa-brands fa-whatsapp"></i>
+  </a>
+
+  <script>
+    // Nav scroll
+    const nav = document.getElementById('nav');
+    window.addEventListener('scroll', () => {
+      nav.classList.toggle('scrolled', window.scrollY > 60);
+    });
+
+    // Hamburger
+    const toggle = document.getElementById('navToggle');
+    const links = document.getElementById('navLinks');
+    toggle.addEventListener('click', () => links.classList.toggle('open'));
+    links.querySelectorAll('a').forEach(a => {
+      a.addEventListener('click', () => links.classList.remove('open'));
+    });
+    // Gallery expand / collapse
+    const expandBtn = document.getElementById('galleryExpandBtn');
+    const collapseBtn = document.getElementById('galleryCollapseBtn');
+    const preview = document.getElementById('galleryPreview');
+    const fullGallery = document.getElementById('galleryFull');
+
+    if (expandBtn) {
+      expandBtn.addEventListener('click', () => {
+        preview.style.display = 'none';
+        fullGallery.classList.add('open');
+        fullGallery.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+    if (collapseBtn) {
+      collapseBtn.addEventListener('click', () => {
+        fullGallery.classList.remove('open');
+        preview.style.display = 'grid';
+        document.getElementById('galerija').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      });
+    }
+
+    // Gallery tabs filter (radi samo unutar full gallery)
+    document.querySelectorAll('.gallery-tab').forEach(tab => {
+      tab.addEventListener('click', () => {
+        document.querySelectorAll('.gallery-tab').forEach(t => t.classList.remove('active'));
+        tab.classList.add('active');
+        const filter = tab.dataset.filter;
+        fullGallery.querySelectorAll('.gallery-item').forEach(item => {
+          if (filter === 'all' || item.dataset.cat === filter) {
+            item.classList.remove('hidden');
+          } else {
+            item.classList.add('hidden');
+          }
+        });
+      });
+    });
+
+  </script>
+
+  <!-- BOOKING FORMA JS -->
+  <script>
+    (function () {
+      const checkinEl = document.getElementById('checkin');
+      const checkoutEl = document.getElementById('checkout');
+      const nightsDisp = document.getElementById('nightsDisplay');
+      const nightsText = document.getElementById('nightsText');
+      const formError = document.getElementById('formError');
+      const sendBtn = document.getElementById('sendWhatsApp');
+      const imeEl = document.getElementById('ime');
+      const emailEl = document.getElementById('email');
+
+      const PRICE_PER_NIGHT = 70;
+      const MIN_NIGHTS = 4;
+
+      /* ── Date constraints with Flatpickr ── */
+      const today = new Date();
+      today.setHours(0, 0, 0, 0);
+      const maxDate = new Date(today);
+      maxDate.setFullYear(maxDate.getFullYear() + 2);
+
+      const checkinFp = flatpickr("#checkin", {
+        dateFormat: "Y-m-d",
+        altInput: true,
+        altFormat: "d/m/Y",
+        minDate: today,
+        maxDate: maxDate,
+        disableMobile: true, // Prevents native mobile picker
+        locale: document.documentElement.lang === 'en' ? 'en' : 'hr',
+        onChange: function(selectedDates, dateStr, instance) {
+          if (selectedDates.length > 0) {
+            const minOut = new Date(selectedDates[0]);
+            minOut.setDate(minOut.getDate() + MIN_NIGHTS);
+            checkoutFp.set('minDate', minOut);
+            
+            if (checkoutFp.selectedDates.length > 0 && checkoutFp.selectedDates[0] < minOut) {
+              checkoutFp.clear();
+            }
+            updateNights();
+            clearFieldError(checkinEl);
+            
+            // Open checkout picker immediately after selecting checkin
+            setTimeout(() => checkoutFp.open(), 100);
+          } else {
+             checkoutFp.set('minDate', null);
+             checkoutFp.clear();
+             updateNights();
+          }
+        }
+      });
+
+      const checkoutFp = flatpickr("#checkout", {
+        dateFormat: "Y-m-d",
+        altInput: true,
+        altFormat: "d/m/Y",
+        minDate: today,
+        maxDate: maxDate,
+        disableMobile: true,
+        locale: document.documentElement.lang === 'en' ? 'en' : 'hr',
+        onChange: function(selectedDates, dateStr, instance) {
+           updateNights();
+           clearFieldError(checkoutEl);
+        }
+      });
+
+      window.checkinFp = checkinFp;
+      window.checkoutFp = checkoutFp;
+
+      /* ── Live nights calculator ── */
+      function calcNights() {
+        if (!checkinEl.value || !checkoutEl.value) return 0;
+        const ci = new Date(checkinEl.value);
+        const co = new Date(checkoutEl.value);
+        const diff = Math.round((co - ci) / 86400000);
+        return diff > 0 ? diff : 0;
+      }
+
+      function updateNights() {
+        const nights = calcNights();
+        if (nights > 0) {
+          const total = nights * PRICE_PER_NIGHT;
+          const warn = nights < MIN_NIGHTS;
+          nightsText.textContent = warn
+            ? `${nights} noćenja — ⚠️ Minimalno ${MIN_NIGHTS} noćenja`
+            : `${nights} noćenja × ${PRICE_PER_NIGHT}€ = ${total}€`;
+          nightsDisp.style.display = 'flex';
+          nightsDisp.style.color = warn ? '#c0392b' : 'var(--color-primary)';
+        } else {
+          nightsDisp.style.display = 'none';
+        }
+      }
+
+      /* ── Field-level visual feedback ── */
+      function setFieldError(el, msg) {
+        el.style.borderColor = '#e74c3c';
+        el.style.boxShadow = '0 0 0 2px rgba(231,76,60,0.18)';
+        el.dataset.errMsg = msg;
+      }
+      function clearFieldError(el) {
+        el.style.borderColor = '';
+        el.style.boxShadow = '';
+        delete el.dataset.errMsg;
+      }
+      function setFieldOk(el) {
+        el.style.borderColor = 'var(--color-primary)';
+        el.style.boxShadow = '0 0 0 2px rgba(27,67,50,0.12)';
+      }
+
+      /* Live name validation */
+      imeEl.addEventListener('input', () => {
+        if (imeEl.value.trim().length >= 2) { setFieldOk(imeEl); }
+        else { clearFieldError(imeEl); }
+      });
+      imeEl.addEventListener('blur', () => {
+        if (!imeEl.value.trim()) setFieldError(imeEl, 'Unesite ime i prezime');
+      });
+
+      /* Live email validation (optional field) */
+      emailEl.addEventListener('blur', () => {
+        const v = emailEl.value.trim();
+        if (v && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) {
+          setFieldError(emailEl, 'Neispravan format email adrese');
+        } else {
+          clearFieldError(emailEl);
+          if (v) setFieldOk(emailEl);
+        }
+      });
+      emailEl.addEventListener('input', () => { if (!emailEl.value.trim()) clearFieldError(emailEl); });
+
+      /* ── Submit / Send ── */
+      sendBtn.addEventListener('click', () => {
+        formError.textContent = '';
+        let firstError = null;
+
+        const ime = imeEl.value.trim();
+        const email = emailEl.value.trim();
+        const gosti = document.getElementById('gosti').value;
+        const napomena = document.getElementById('napomena').value.trim();
+        const ljubimac = document.getElementById('ljubimac').checked;
+        const nights = calcNights();
+
+        const lang = document.documentElement.lang || 'hr';
+
+        // Validate name
+        if (!ime) {
+          setFieldError(imeEl, lang === 'en' ? 'Enter full name' : 'Unesite ime i prezime');
+          firstError = firstError || (lang === 'en' ? '⚠️ Please enter your full name.' : '⚠️ Molimo unesite svoje ime i prezime.');
+        } else setFieldOk(imeEl);
+
+        // Validate check-in
+        if (!checkinEl.value) {
+          setFieldError(checkinEl, lang === 'en' ? 'Select check-in date' : 'Odaberite datum prijave');
+          firstError = firstError || (lang === 'en' ? '⚠️ Please select a check-in date.' : '⚠️ Molimo odaberite datum prijave.');
+        } else setFieldOk(checkinEl);
+
+        // Validate check-out
+        if (!checkoutEl.value) {
+          setFieldError(checkoutEl, lang === 'en' ? 'Select check-out date' : 'Odaberite datum odjave');
+          firstError = firstError || (lang === 'en' ? '⚠️ Please select a check-out date.' : '⚠️ Molimo odaberite datum odjave.');
+        } else setFieldOk(checkoutEl);
+
+        // Validate min nights (only if both dates present)
+        if (checkinEl.value && checkoutEl.value && nights < MIN_NIGHTS) {
+          setFieldError(checkoutEl, lang === 'en' ? `Minimum ${MIN_NIGHTS} nights` : `Minimalno ${MIN_NIGHTS} noćenja`);
+          firstError = firstError || (lang === 'en' ? `⚠️ Minimum stay is ${MIN_NIGHTS} nights.` : `⚠️ Minimalni boravak je ${MIN_NIGHTS} noćenja.`);
+        }
+
+        // Validate email format if provided
+        if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
+          setFieldError(emailEl, lang === 'en' ? 'Invalid email' : 'Neispravan email');
+          firstError = firstError || (lang === 'en' ? '⚠️ Invalid email format.' : '⚠️ Neispravan format email adrese.');
+        }
+
+        if (firstError) {
+          formError.textContent = firstError;
+          formError.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+          return;
+        }
+
+        // Format dates for message (dd.mm.yyyy)
+        function fmtDate(iso) {
+          const [y, m, d] = iso.split('-');
+          return `${d}.${m}.${y}.`;
+        }
+
+        const total = nights * PRICE_PER_NIGHT;
+        let msg = '';
+        if (lang === 'en') {
+          msg = `Hello Antonia! 👋\n\n`;
+          msg += `I am interested in booking the apartment:\n`;
+          msg += `👤 Name: ${ime}\n`;
+          msg += `📅 Check-in: ${fmtDate(checkinEl.value)}\n`;
+          msg += `📅 Check-out: ${fmtDate(checkoutEl.value)}\n`;
+          msg += `🌙 Nights: ${nights} × ${PRICE_PER_NIGHT}€ = *${total}€*\n`;
+          msg += `👥 Guests: ${gosti}\n`;
+          msg += `🐾 Pet: ${ljubimac ? 'Yes' : 'No'}\n`;
+          if (email) msg += `📧 Email: ${email}\n`;
+          if (napomena) msg += `📝 Note: ${napomena}\n`;
+        } else {
+          msg = `Pozdrav Antonia! 👋\n\n`;
+          msg += `Zanimam se za rezervaciju apartmana:\n`;
+          msg += `👤 Ime: ${ime}\n`;
+          msg += `📅 Prijava: ${fmtDate(checkinEl.value)}\n`;
+          msg += `📅 Odjava: ${fmtDate(checkoutEl.value)}\n`;
+          msg += `🌙 Noćenja: ${nights} × ${PRICE_PER_NIGHT}€ = *${total}€*\n`;
+          msg += `👥 Gostiju: ${gosti}\n`;
+          msg += `🐾 Ljubimac: ${ljubimac ? 'Da' : 'Ne'}\n`;
+          if (email) msg += `📧 Email: ${email}\n`;
+          if (napomena) msg += `📝 Napomena: ${napomena}\n`;
+        }
+
+        window.open(`https://wa.me/385915575156?text=${encodeURIComponent(msg)}`, '_blank');
+      });
+    })();
+  </script>
+
+  <!-- REVIEWS CAROUSEL JS -->
+  <script>
+    (function () {
+      const wrap = document.querySelector('.reviews-carousel-wrap');
+      const track = document.getElementById('reviewsTrack');
+      if (!track || !wrap) return;
+
+      // Duplicate for seamless loop
+      track.innerHTML += track.innerHTML;
+
+      const SPEED = 0.6; // px per frame — auto-scroll speed
+      let x = 0;       // current translateX
+      let halfW = 0;       // half of total track width (loop point)
+      let raf = null;
+      let isDragging = false;
+      let dragStartX = 0;
+      let dragStartScroll = 0;
+      let lastDragX = 0;
+      let velocity = 0;
+      let paused = false;
+
+      function getHalfW() {
+        // Total width divided by 2 (we duplicated content)
+        return track.scrollWidth / 2;
+      }
+
+      function setX(val) {
+        halfW = getHalfW();
+        // Loop: when we've scrolled one full copy, jump back
+        if (val <= -halfW) val += halfW;
+        if (val > 0) val -= halfW;
+        x = val;
+        track.style.transform = `translateX(${x}px)`;
+      }
+
+      function tick() {
+        if (!isDragging) {
+          if (!paused) {
+            setX(x - SPEED);
+          }
+          // Momentum after drag release
+          if (Math.abs(velocity) > 0.1) {
+            setX(x + velocity);
+            velocity *= 0.94;
+          }
+        }
+        raf = requestAnimationFrame(tick);
+      }
+
+      // Mouse events
+      wrap.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        dragStartX = e.clientX;
+        dragStartScroll = x;
+        lastDragX = e.clientX;
+        velocity = 0;
+        wrap.classList.add('dragging');
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(tick);
+      });
+
+      window.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        velocity = e.clientX - lastDragX;
+        lastDragX = e.clientX;
+        const delta = e.clientX - dragStartX;
+        setX(dragStartScroll + delta);
+      });
+
+      window.addEventListener('mouseup', () => {
+        if (!isDragging) return;
+        isDragging = false;
+        wrap.classList.remove('dragging');
+      });
+
+      // Touch events
+      wrap.addEventListener('touchstart', (e) => {
+        isDragging = true;
+        dragStartX = e.touches[0].clientX;
+        dragStartScroll = x;
+        lastDragX = e.touches[0].clientX;
+        velocity = 0;
+      }, { passive: true });
+
+      wrap.addEventListener('touchmove', (e) => {
+        if (!isDragging) return;
+        velocity = e.touches[0].clientX - lastDragX;
+        lastDragX = e.touches[0].clientX;
+        const delta = e.touches[0].clientX - dragStartX;
+        setX(dragStartScroll + delta);
+      }, { passive: true });
+
+      wrap.addEventListener('touchend', () => {
+        isDragging = false;
+      });
+
+      // Pause on hover (desktop only)
+      wrap.addEventListener('mouseenter', () => { paused = true; });
+      wrap.addEventListener('mouseleave', () => { paused = false; });
+
+      // Start
+      raf = requestAnimationFrame(tick);
+    })();
+  </script>
+
+  <!-- FAQ ACCORDION JS -->
+  <script>
+    document.querySelectorAll('.faq-question').forEach(btn => {
+      btn.addEventListener('click', () => {
+        const item = btn.closest('.faq-item');
+        const isOpen = item.classList.contains('open');
+        // Zatvori sve
+        document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('open'));
+        // Otvori kliknuti ako nije bio otvoren
+        if (!isOpen) item.classList.add('open');
+      });
+    });
+  </script>
+
+  <!-- THEME SWITCHER JS -->
+  <script>
+    document.querySelectorAll('.theme-btn').forEach(btn => {
+      btn.addEventListener('click', () => {
+        document.documentElement.setAttribute('data-theme', btn.dataset.t);
+        localStorage.setItem('antonia-theme', btn.dataset.t);
+      });
+    });
+
+    // Zapamti odabranu temu
+    const saved = localStorage.getItem('antonia-theme');
+    if (saved) document.documentElement.setAttribute('data-theme', saved);
+  </script>
+
+  <!-- LIGHTBOX HTML -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Pregled fotografije">
+    <button class="lb-close" id="lightboxClose" aria-label="Zatvori"><i class="fa-solid fa-xmark"></i></button>
+    <button class="lb-nav lb-prev" id="lightboxPrev" aria-label="Prethodna"><i
+        class="fa-solid fa-chevron-left"></i></button>
+    <div class="lb-content">
+      <img id="lightboxImg" src="" alt="" />
+      <div class="lb-counter" id="lightboxCounter"></div>
+    </div>
+    <button class="lb-nav lb-next" id="lightboxNext" aria-label="Sljedeća"><i
+        class="fa-solid fa-chevron-right"></i></button>
+  </div>
+
+  <!-- LIGHTBOX JS -->
+  <script>
+    (function () {
+      const lb = document.getElementById('lightbox');
+      const lbImg = document.getElementById('lightboxImg');
+      const lbCounter = document.getElementById('lightboxCounter');
+      const lbClose = document.getElementById('lightboxClose');
+      const lbPrev = document.getElementById('lightboxPrev');
+      const lbNext = document.getElementById('lightboxNext');
+
+      let images = [];   // { src, alt }
+      let current = 0;
+
+      /* Build ordered image list from full gallery (complete set) */
+      function buildImages() {
+        const seen = new Set();
+        const list = [];
+        // Full gallery first (all unique images)
+        document.querySelectorAll('.gallery-item img').forEach(img => {
+          if (!seen.has(img.src)) { seen.add(img.src); list.push({ src: img.src, alt: img.alt }); }
+        });
+        // Preview images not already included
+        document.querySelectorAll('.gp-main img, .gp-cell img').forEach(img => {
+          if (!seen.has(img.src)) { seen.add(img.src); list.push({ src: img.src, alt: img.alt }); }
+        });
+        return list;
+      }
+
+      function openAt(src) {
+        images = buildImages();
+        current = images.findIndex(i => i.src === src);
+        if (current < 0) current = 0;
+        show();
+        lb.classList.add('open');
+        document.body.style.overflow = 'hidden';
+      }
+
+      function close() {
+        lb.classList.remove('open');
+        document.body.style.overflow = '';
+      }
+
+      function show() {
+        lbImg.classList.add('lb-loading');
+        const tmp = new Image();
+        tmp.onload = () => { lbImg.src = tmp.src; lbImg.alt = images[current].alt; lbImg.classList.remove('lb-loading'); };
+        tmp.src = images[current].src;
+        lbCounter.textContent = (current + 1) + ' / ' + images.length;
+      }
+
+      function prev() { current = (current - 1 + images.length) % images.length; show(); }
+      function next() { current = (current + 1) % images.length; show(); }
+
+      lbClose.addEventListener('click', close);
+      lbPrev.addEventListener('click', prev);
+      lbNext.addEventListener('click', next);
+      lb.addEventListener('click', e => { if (e.target === lb) close(); });
+      document.addEventListener('keydown', e => {
+        if (!lb.classList.contains('open')) return;
+        if (e.key === 'Escape') close();
+        if (e.key === 'ArrowLeft') prev();
+        if (e.key === 'ArrowRight') next();
+      });
+
+      /* Touch swipe support */
+      let touchStartX = 0;
+      lb.addEventListener('touchstart', e => { touchStartX = e.touches[0].clientX; }, { passive: true });
+      lb.addEventListener('touchend', e => {
+        const diff = touchStartX - e.changedTouches[0].clientX;
+        if (Math.abs(diff) > 50) { if (diff > 0) next(); else prev(); }
+      });
+
+      /* Attach click handlers to preview images */
+      function attachPreview() {
+        document.querySelectorAll('.gp-main').forEach(cell => {
+          cell.addEventListener('click', e => {
+            if (e.target.closest('.gallery-expand-btn')) return;
+            const img = cell.querySelector('img');
+            if (img) openAt(img.src);
+          });
+        });
+        document.querySelectorAll('.gp-cell').forEach(cell => {
+          cell.addEventListener('click', e => {
+            if (e.target.closest('.gallery-expand-btn')) return;
+            const img = cell.querySelector('img');
+            if (img) openAt(img.src);
+          });
+        });
+      }
+
+      /* Attach click handlers to full gallery items */
+      function attachFullGallery() {
+        document.querySelectorAll('.gallery-item').forEach(item => {
+          item.addEventListener('click', () => {
+            const img = item.querySelector('img');
+            if (img) openAt(img.src);
+          });
+        });
+      }
+
+      attachPreview();
+      attachFullGallery();
+    })();
+  </script>
+
+  <!-- TRANSLATIONS JS -->
+  <script>
+    const translations = {
+      // Nav & Hero
+      "nav-logo": { hr: "Apartment Antonia", en: "Apartment Antonia" },
+      "nav-about": { hr: "O apartmanu", en: "About" },
+      "nav-gallery": { hr: "Galerija", en: "Gallery" },
+      "nav-amenities": { hr: "Sadržaji", en: "Amenities" },
+      "nav-reviews": { hr: "Recenzije", en: "Reviews" },
+      "nav-faq": { hr: "FAQ", en: "FAQ" },
+      "nav-map": { hr: "Lokacija", en: "Location" },
+      "nav-book": { hr: "Rezerviraj", en: "Book Now" },
+
+      "hero-eyebrow": { hr: "Podbablje · Imotski · 30 km od mora", en: "Podbablje · Imotski · 30 km from the sea" },
+      "hero-title": { hr: "Antonia", en: "Antonia" },
+      "hero-sub": { hr: "Privatna oaza za 3 gosta · Etno konoba · Dvorište · Roštilj", en: "Private oasis for 3 guests · Ethno tavern · Courtyard · BBQ" },
+      "hero-btn-book": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Rezerviraj izravno", en: "<i class=\"fa-brands fa-whatsapp\"></i> Book directly" },
+      "hero-btn-gallery": { hr: "<i class=\"fa-regular fa-images\"></i> Pogledaj galeriju", en: "<i class=\"fa-regular fa-images\"></i> View gallery" },
+      "hero-scroll": { hr: "Pomakni", en: "Scroll" },
+
+      // Proof Bar
+      "proof-rating": { hr: "Ocjena 5.0 ⭐", en: "Rating 5.0 ⭐" },
+      "proof-pets": { hr: "Kućni ljubimci dobrodošli", en: "Pets welcome" },
+      "proof-parking": { hr: "Besplatan Parking", en: "Free Parking" },
+      "proof-sea": { hr: "30km do mora", en: "30km from sea" },
+      "proof-reply": { hr: "Odgovor u roku od 1h", en: "Reply within 1h" },
+
+      // About
+      "about-exp": { hr: "godine<br>iskustva", en: "years of<br>experience" },
+      "about-eyebrow": { hr: "O apartmanu", en: "About the apartment" },
+      "about-title": { hr: "Više od apartmana —<br><em>doživljaj</em>", en: "More than an apartment —<br><em>an experience</em>" },
+      "about-desc": { hr: "Opustite se u ugodnom i moderno uređenom smještaju, smještenom svega 30 km od mora. Na raspolaganju su vam privatni ulaz, potpuno opremljena kuhinja, dnevni boravak, spavaća soba i kupaonica.<br>Uživajte u privatnom dvorištu, vanjskom roštilju te prostoriji za zabavu sa zvučnim i svjetlosnim efektima. Idealan izbor za parove koji traže mir, privatnost i potpuni odmor.", en: "Relax in a cozy and modernly decorated accommodation, located just 30 km from the sea. You have at your disposal a private entrance, a fully equipped kitchen, a living room, a bedroom and a bathroom.<br>Enjoy the private courtyard, outdoor barbecue, and an entertainment room with sound and light effects. An ideal choice for couples looking for peace, privacy, and complete relaxation." },
+      "about-list-1": { hr: "Okružen prirodom i šumom,", en: "Surrounded by nature and forest," },
+      "about-list-2": { hr: "udaljen svega 3 km od rijeke,", en: "only 3 km from the river," },
+      "about-list-3": { hr: "7 km od jezera i 30 km od mora.", en: "7 km from the lake and 30 km from the sea." },
+      "about-list-4": { hr: "Restoran 400 m, dućan 1 km.", en: "Restaurant 400 m, shop 1 km." },
+      "about-btn": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Provjeri dostupnost", en: "<i class=\"fa-brands fa-whatsapp\"></i> Check availability" },
+
+      // Gallery
+      "gallery-eyebrow": { hr: "Fotografije", en: "Photos" },
+      "gallery-title": { hr: "Istražite prostor", en: "Explore the space" },
+      "gallery-subtitle": { hr: "Moderni apartman na gornjem katu i autentična etno konoba u prizemlju.", en: "Modern apartment on the upper floor and authentic ethno tavern on the ground floor." },
+      "gal-show-all": { hr: "Prikaži sve fotografije", en: "Show all photos" },
+      "gal-filter-all": { hr: "Sve", en: "All" },
+      "gal-filter-living": { hr: "Dnevni boravak", en: "Living room" },
+      "gal-filter-kitchen": { hr: "Kuhinja", en: "Kitchen" },
+      "gal-filter-dining": { hr: "Trpezarija", en: "Dining room" },
+      "gal-filter-bed": { hr: "Spavaća soba", en: "Bedroom" },
+      "gal-filter-bath": { hr: "Kupaonica", en: "Bathroom" },
+      "gal-filter-ext": { hr: "Eksterijer", en: "Exterior" },
+      "gal-filter-more": { hr: "Dodatno", en: "More" },
+
+      // Amenities Header
+      "am-eyebrow": { hr: "Što je uključeno", en: "What's included" },
+      "am-title": { hr: "Sadržaji", en: "Amenities" },
+      "am-sub": { hr: "Sve što vam je potrebno za ugodan boravak — i više od toga.", en: "Everything you need for a comfortable stay — and more." },
+
+      // Amenities Details
+      "am-bath-title": { hr: "Kupaonica", en: "Bathroom" },
+      "am-bath-1": { hr: "Sušilo za kosu", en: "Hair dryer" },
+      "am-bath-2": { hr: "Šampon i regenerator", en: "Shampoo and conditioner" },
+      "am-bath-3": { hr: "Gel za tuširanje", en: "Shower gel" },
+      "am-bath-4": { hr: "Sapun i toaletni papir", en: "Soap and toilet paper" },
+      "am-bath-5": { hr: "Topla voda", en: "Hot water" },
+      "am-bath-6": { hr: "Sredstva za čišćenje", en: "Cleaning products" },
+      "am-bed-title": { hr: "Spavaća soba", en: "Bedroom" },
+      "am-bed-1": { hr: "Posteljina i ručnici", en: "Bed linens and towels" },
+      "am-bed-2": { hr: "Dodatni jastuci i pokrivači", en: "Extra pillows and blankets" },
+      "am-bed-3": { hr: "Zavjese za zamračivanje", en: "Room-darkening shades" },
+      "am-bed-4": { hr: "Glačalo i vješalice", en: "Iron and hangers" },
+      "am-bed-5": { hr: "Ormar i sef", en: "Closet and safe" },
+      "am-bed-6": { hr: "Mreža protiv komaraca", en: "Mosquito net" },
+      "am-ent-title": { hr: "Zabava", en: "Entertainment" },
+      "am-ent-1": { hr: "TV", en: "TV" },
+      "am-ent-2": { hr: "Zvučni sustav", en: "Sound system" },
+      "am-ent-3": { hr: "Gramofon", en: "Record player" },
+      "am-ent-4": { hr: "Knjige", en: "Books" },
+      "am-ent-5": { hr: "Društvene igre", en: "Board games" },
+      "am-ac-title": { hr: "Grijanje i hlađenje", en: "Heating and cooling" },
+      "am-ac-1": { hr: "Klima uređaj", en: "Air conditioning" },
+      "am-ac-2": { hr: "Grijanje", en: "Heating" },
+      "am-ac-3": { hr: "Prijenosni ventilatori", en: "Portable fans" },
+      "am-kit-title": { hr: "Kuhinja", en: "Kitchen" },
+      "am-kit-1": { hr: "Potpuno opremljena kuhinja", en: "Fully equipped kitchen" },
+      "am-kit-2": { hr: "Hladnjak i zamrzivač", en: "Refrigerator and freezer" },
+      "am-kit-3": { hr: "Pećnica i mikrovalna pećnica", en: "Oven and microwave" },
+      "am-kit-4": { hr: "Perilica posuđa", en: "Dishwasher" },
+      "am-kit-5": { hr: "Aparat za kavu i toster", en: "Coffee maker and toaster" },
+      "am-kit-6": { hr: "Pribor za roštilj", en: "Barbecue utensils" },
+      "am-out-title": { hr: "Vanjski prostor", en: "Outdoor space" },
+      "am-out-1": { hr: "Privatno dvorište", en: "Private courtyard" },
+      "am-out-2": { hr: "Roštilj", en: "BBQ grill" },
+      "am-out-3": { hr: "Vanjska kuhinja", en: "Outdoor kitchen" },
+      "am-out-4": { hr: "Vanjski prostor za sjedenje", en: "Outdoor seating area" },
+      "am-out-5": { hr: "Ognjište", en: "Fire pit" },
+      "am-out-6": { hr: "Bicikli", en: "Bicycles" },
+      "am-gen-title": { hr: "Općenito", en: "General" },
+      "am-gen-1": { hr: "Besplatan WiFi", en: "Free WiFi" },
+      "am-gen-2": { hr: "Besplatan parking", en: "Free parking" },
+      "am-gen-3": { hr: "Privatni ulaz", en: "Private entrance" },
+      "am-gen-4": { hr: "Perilica rublja", en: "Washing machine" },
+      "am-gen-5": { hr: "Vatrogasni aparat", en: "Fire extinguisher" },
+      "am-gen-6": { hr: "Kutija prve pomoći", en: "First aid kit" },
+      "am-spec-title": { hr: "Posebno", en: "Special" },
+      "am-spec-1": { hr: "Dopušteni kućni ljubimci", en: "Pets allowed" },
+      "am-spec-2": { hr: "Dopušteno pušenje", en: "Smoking allowed" },
+      "am-spec-3": { hr: "Dobrodošli dugi boravci", en: "Long term stays allowed" },
+      "am-spec-4": { hr: "Čišćenje na zahtjev", en: "Cleaning on request" },
+      "am-spec-5": { hr: "Pohrana prtljage", en: "Luggage dropoff allowed" },
+
+      // Booking
+      "book-eyebrow": { hr: "Izravna rezervacija", en: "Direct Booking" },
+      "book-title": { hr: "Rezervirajte bez<br><em>provizije</em>", en: "Book without<br><em>commission</em>" },
+      "book-desc": { hr: "Pošaljite svoj upit putem WhatsAppa. Odgovor u roku od 1 sat.", en: "Send your inquiry via WhatsApp. Reply within 1 hour." },
+      "book-perk-1": { hr: "Izravna rezervacija", en: "Direct booking" },
+      "book-perk-2": { hr: "Odgovor u roku od 1h", en: "Reply within 1h" },
+      "book-perk-3": { hr: "Fleksibilna prijava", en: "Flexible check-in" },
+      "book-perk-4": { hr: "Ljubimci dobrodošli", en: "Pets welcome" },
+      "book-price-from": { hr: "Od", en: "From" },
+      "book-price-night": { hr: "/ noćenju", en: "/ night" },
+      "book-price-note": { hr: "Minimalno 4 noćenja · Cijena se potvrđuje na upit", en: "Minimum 4 nights · Price confirmed upon request" },
+
+      // Form
+      "form-checkin": { hr: "Prijava", en: "Check-in" },
+      "form-checkout": { hr: "Odjava", en: "Check-out" },
+      "form-name-label": { hr: "Ime i prezime", en: "Full Name" },
+      "form-name-ph": { hr: "Vaše ime", en: "Your name" },
+      "form-guests-label": { hr: "Broj gostiju", en: "Number of guests" },
+      "form-guest-1": { hr: "1 gost", en: "1 guest" },
+      "form-guest-2": { hr: "2 gosta", en: "2 guests" },
+      "form-guest-3": { hr: "3 gosta", en: "3 guests" },
+      "form-email-label": { hr: "Email (opciono)", en: "Email (optional)" },
+      "form-email-ph": { hr: "vasa@email.com", en: "your@email.com" },
+      "form-note-label": { hr: "Napomena", en: "Note" },
+      "form-note-ph": { hr: "Posebni zahtjevi, pitanja...", en: "Special requests, questions..." },
+      "form-pet-label": { hr: "🐾 Donosim kućnog ljubimca", en: "🐾 I'm bringing a pet" },
+      "form-btn": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Pošalji upit na WhatsApp", en: "<i class=\"fa-brands fa-whatsapp\"></i> Send inquiry to WhatsApp" },
+      "form-reply-note": { hr: "Antonia odgovara u roku od 1 sata", en: "Antonia replies within 1 hour" },
+
+      // Reviews
+      "rev-eyebrow": { hr: "Što kažu gosti", en: "What guests say" },
+      "rev-title": { hr: "Recenzije", en: "Reviews" },
+      "rev-sub": { hr: "Ocjena 5.0 ⭐ · Gosti se uvijek rado vraćaju", en: "Rating 5.0 ⭐ · Guests always love to return" },
+
+      // FAQ
+      "faq-eyebrow": { hr: "Imate pitanja?", en: "Have questions?" },
+      "faq-title": { hr: "FAQ", en: "FAQ" },
+      "faq-sub": { hr: "Sve što trebate znati prije dolaska.", en: "Everything you need to know before arrival." },
+      "faq-q1": { hr: "Koji je minimalni broj noći?", en: "What is the minimum stay?" },
+      "faq-a1": { hr: "Minimalni boravak je 4 noći. Za duže boravke (tjedan i više) možete se dogovoriti za povoljniju cijenu direktno putem WhatsAppa.", en: "The minimum stay is 4 nights. For longer stays (a week or more) you can negotiate a better price directly via WhatsApp." },
+      "faq-q2": { hr: "Kako se vrši prijava (check-in)?", en: "How does check-in work?" },
+      "faq-a2": { hr: "Check-in je fleksibilan i dogovara se direktno. Checkout je do 10:00. Apartman ima zaseban ulaz pa imate potpunu privatnost.", en: "Check-in is flexible and arranged directly. Checkout is by 10:00. The apartment has a separate entrance so you have complete privacy." },
+      "faq-q3": { hr: "Je li parking besplatan?", en: "Is parking free?" },
+      "faq-a3": { hr: "Da, besplatan privatni parking je dostupan direktno uz apartman. Nema ograničenja ni naplate.", en: "Yes, free private parking is available directly at the apartment. There are no restrictions or charges." },
+      "faq-q4": { hr: "Mogu li doći s kućnim ljubimcem?", en: "Can I bring a pet?" },
+      "faq-a4": { hr: "Da! Kućni ljubimci su dobrodošli. Privatno dvorište je idealno za šetnju. Samo naznačite u upitu da donosite ljubimca.", en: "Yes! Pets are welcome. The private courtyard is ideal for walking. Just indicate in your inquiry that you are bringing a pet." },
+      "faq-q5": { hr: "Što je etno konoba?", en: "What is the ethno tavern?" },
+      "faq-a5": { hr: "Etno konoba je posebna zabavna prostorija u prizemlju s kamenim zidovima, hrastovim stolom i klupama, TV-om, mini barom i hladnjakom s pićima. Ima zvučne i svjetlosne efekte — idealna za večernje druženje.", en: "The ethno tavern is a special entertainment room on the ground floor with stone walls, oak table and benches, TV, minibar, and fridge with drinks. It features sound and light effects — ideal for evening gatherings." },
+      "faq-q6": { hr: "Koliko je daleko more?", en: "How far is the sea?" },
+      "faq-a6": { hr: "Makarska rivijera je oko 30 km (otprilike 30 minuta vožnje). U blizini su i rijeka (3 km) i jezero (7 km) za kupanje u prirodi.", en: "The Makarska Riviera is about 30 km (roughly a 30-minute drive). Nearby are also a river (3 km) and a lake (7 km) for nature swimming." },
+      "faq-q7": { hr: "Kako rezervirati direktno?", en: "How to book directly?" },
+      "faq-a7": { hr: "Ispunite formu na ovoj stranici i upit će otići direktno na WhatsApp. Kontakt je direktan, cijena niža, a odgovor stiže u roku od 1 sat.", en: "Fill out the form on this page and the inquiry will go directly to WhatsApp. Contact is direct, price is lower, and the reply arrives within 1 hour." },
+
+      // Mapa
+      "map-eyebrow": { hr: "Kako doći do nas", en: "How to find us" },
+      "map-title": { hr: "Lokacija", en: "Location" },
+      "map-sub": { hr: "Podbablje Gornje, Imotski · 30 km do mora · Besplatan parking", en: "Podbablje Gornje, Imotski · 30 km to the sea · Free parking" },
+      "map-pill-1": { hr: "Podbablje Gornje, Imotski, HR", en: "Podbablje Gornje, Imotski, HR" },
+      "map-pill-2": { hr: "30 km do Makarske rivijere", en: "30 km to Makarska Riviera" },
+      "map-pill-3": { hr: "7 km do jezera", en: "7 km to the lake" },
+      "map-pill-4": { hr: "Besplatan privatni parking", en: "Free private parking" },
+
+      // Footer
+      "footer-tagline": { hr: "Vaše utočište u srcu Dalmatinske zagore.<br>Luksuz, priroda i toplina doma.", en: "Your sanctuary in the heart of the Dalmatian Hinterland.<br>Luxury, nature, and the warmth of home." },
+      "footer-links": { hr: "Brzi linkovi", en: "Quick links" },
+      "footer-contact": { hr: "Kontakt", en: "Contact" },
+      "footer-addr": { hr: "Podbablje Gornje<br>Imotski, Hrvatska", en: "Podbablje Gornje<br>Imotski, Croatia" },
+      "footer-reply": { hr: "Odgovor u roku od 1 sata", en: "Reply within 1 hour" },
+      "footer-btn": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Pošalji upit", en: "<i class=\"fa-brands fa-whatsapp\"></i> Send inquiry" },
+      "footer-copy": { hr: "© 2025 Apartment Antonia · Podbablje Gornje, Hrvatska", en: "© 2025 Apartment Antonia · Podbablje Gornje, Croatia" }
+    };
+
+    (function () {
+      let currentLang = localStorage.getItem('appLang') || 'hr';
+      const toggleBtn = document.getElementById('langToggle');
+
+      function applyTranslations(lang) {
+        document.querySelectorAll('[data-i18n]').forEach(el => {
+          const key = el.getAttribute('data-i18n');
+          if (translations[key] && translations[key][lang]) {
+            el.innerHTML = translations[key][lang];
+          }
+        });
+
+        // Handle placeholders
+        document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+          const key = el.getAttribute('data-i18n-placeholder');
+          if (translations[key] && translations[key][lang]) {
+            el.placeholder = translations[key][lang];
+          }
+        });
+
+        // Update UI toggle classes
+        document.querySelectorAll('.lang-opt').forEach(opt => {
+          if (opt.getAttribute('data-lang') === lang) {
+            opt.classList.add('active');
+          } else {
+            opt.classList.remove('active');
+          }
+        });
+
+        // Update document lang
+        document.documentElement.lang = lang;
+        
+        // Update Flatpickr locales if initialized
+        if (window.checkinFp && window.checkoutFp) {
+          window.checkinFp.set('locale', lang === 'en' ? 'en' : 'hr');
+          window.checkoutFp.set('locale', lang === 'en' ? 'en' : 'hr');
+        }
+      }
+
+      // Initial apply
+      applyTranslations(currentLang);
+
+      // Toggle click
+      if (toggleBtn) {
+        toggleBtn.addEventListener('click', () => {
+          currentLang = currentLang === 'hr' ? 'en' : 'hr';
+          localStorage.setItem('appLang', currentLang);
+          applyTranslations(currentLang);
+        });
+      }
+    })();
+  </script>
+
+
+
+</body>
+
+</html>
