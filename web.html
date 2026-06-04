@@ -501,10 +501,12 @@
     .nav.menu-open .nav-toggle span:nth-child(1) {
       transform: rotate(45deg) translate(5px, 5px);
     }
+
     .nav.menu-open .nav-toggle span:nth-child(2) {
       opacity: 0;
       transform: translateX(-10px);
     }
+
     .nav.menu-open .nav-toggle span:nth-child(3) {
       transform: rotate(-45deg) translate(5px, -5px);
     }
@@ -518,7 +520,8 @@
         right: 0;
         flex-direction: column;
         gap: 0;
-        background: #111111 !important; /* Premium deep charcoal black */
+        background: #111111 !important;
+        /* Premium deep charcoal black */
         padding: 1rem 0;
         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3) !important;
         border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
@@ -535,7 +538,8 @@
       .nav-links a {
         display: block;
         padding: 0.85rem 2rem;
-        color: rgba(255, 255, 255, 0.8) !important; /* High contrast off-white */
+        color: rgba(255, 255, 255, 0.8) !important;
+        /* High contrast off-white */
         border-bottom: 1px solid rgba(255, 255, 255, 0.06);
         font-weight: 500;
         letter-spacing: 0.06em;
@@ -557,7 +561,7 @@
         border-bottom: none;
         padding: 0.75rem 1.5rem;
       }
-      
+
       .nav-links .nav-cta:hover {
         background: var(--color-cta-hover) !important;
       }
@@ -566,11 +570,15 @@
         padding: 1rem 2rem;
         border-top: 1px solid rgba(255, 255, 255, 0.06);
         display: flex;
-        justify-content: flex-start;
+        justify-content: center;
       }
 
       .nav-toggle {
         display: flex;
+      }
+
+      .gallery-cta-wrap {
+        padding: 0.75rem 0 0.5rem;
       }
     }
 
@@ -762,6 +770,13 @@
 
       .hero-badge-sep {
         display: none;
+      }
+
+      .about-text .btn {
+        display: flex;
+        margin: 2rem auto 0 !important;
+        width: fit-content;
+        justify-content: center;
       }
     }
 
@@ -1035,16 +1050,27 @@
 
     @media (max-width: 640px) {
       .gallery-preview {
-        grid-template-columns: 1fr;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 180px 180px;
         height: auto;
+        gap: 4px;
       }
 
       .gp-main {
-        height: 220px;
+        height: 100%;
+        grid-column: span 2;
       }
 
       .gp-grid {
-        height: 220px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        height: 180px;
+        grid-column: span 2;
+      }
+
+      .gallery-cta-wrap {
+        padding: 0.5rem 0 0;
       }
     }
 
@@ -1296,6 +1322,15 @@
       }
     }
 
+    .gallery-cta-wrap {
+      display: block;
+      width: 100%;
+      text-align: center;
+      padding: 2.5rem 0 0.5rem;
+      position: relative;
+      z-index: 1;
+    }
+
     /* ============================================================
        AMENITIJI
     ============================================================ */
@@ -1393,6 +1428,15 @@
       color: #c0392b;
       min-height: 1.2em;
       margin-bottom: 0.5rem;
+    }
+
+    .field-error-msg {
+      display: none;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.75rem;
+      color: #c0392b;
+      margin-top: 0.25rem;
+      font-weight: 500;
     }
 
     .btn-whatsapp {
@@ -2177,6 +2221,7 @@
       .gallery-preview {
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 150px 150px;
+        height: auto;
       }
 
       .gallery-preview .gallery-item--wide {
@@ -2310,6 +2355,7 @@
       .gallery-preview {
         grid-template-columns: 2fr 1fr 1fr;
         grid-template-rows: 200px 200px;
+        height: auto;
       }
 
       .footer-grid {
@@ -2331,49 +2377,60 @@
       font-family: 'DM Sans', sans-serif !important;
       color: var(--color-text) !important;
     }
+
     .flatpickr-calendar .flatpickr-months .flatpickr-month {
       background: transparent !important;
       color: var(--color-text) !important;
     }
+
     .flatpickr-calendar .flatpickr-current-month .flatpickr-monthDropdown-months {
       color: var(--color-text) !important;
       font-family: 'DM Sans', sans-serif !important;
       font-weight: 500;
     }
+
     .flatpickr-calendar .flatpickr-current-month input.numInput.cur-year {
       color: var(--color-text) !important;
       font-family: 'DM Sans', sans-serif !important;
     }
+
     .flatpickr-calendar .flatpickr-current-month .numInputWrapper span.arrowUp::after {
       border-bottom-color: var(--color-text) !important;
     }
+
     .flatpickr-calendar .flatpickr-current-month .numInputWrapper span.arrowDown::after {
       border-top-color: var(--color-text) !important;
     }
+
     .flatpickr-calendar .flatpickr-months .flatpickr-prev-month,
     .flatpickr-calendar .flatpickr-months .flatpickr-next-month {
       color: var(--color-text) !important;
       fill: var(--color-text) !important;
     }
+
     .flatpickr-calendar .flatpickr-months .flatpickr-prev-month:hover,
     .flatpickr-calendar .flatpickr-months .flatpickr-next-month:hover {
       color: var(--color-primary) !important;
     }
+
     .flatpickr-calendar span.flatpickr-weekday {
       color: var(--color-text-muted) !important;
       font-weight: 500 !important;
     }
+
     .flatpickr-calendar .flatpickr-day {
       color: var(--color-text) !important;
       border-radius: 4px !important;
       transition: all 0.2s ease;
     }
+
     .flatpickr-calendar .flatpickr-day:hover,
     .flatpickr-calendar .flatpickr-day:focus {
       background: var(--color-bg-alt) !important;
       border-color: var(--color-bg-alt) !important;
       color: var(--color-text) !important;
     }
+
     .flatpickr-calendar .flatpickr-day.selected,
     .flatpickr-calendar .flatpickr-day.selected:hover,
     .flatpickr-calendar .flatpickr-day.selected:focus {
@@ -2382,15 +2439,18 @@
       color: var(--color-cta-text) !important;
       font-weight: 600;
     }
+
     .flatpickr-calendar .flatpickr-day.today {
       border-color: var(--color-accent) !important;
       background: transparent !important;
       color: var(--color-text) !important;
     }
+
     .flatpickr-calendar .flatpickr-day.today:hover {
       background: var(--color-bg-alt) !important;
       color: var(--color-text) !important;
     }
+
     .flatpickr-calendar .flatpickr-day.flatpickr-disabled,
     .flatpickr-calendar .flatpickr-day.flatpickr-disabled:hover {
       color: var(--color-text-muted) !important;
@@ -2398,15 +2458,28 @@
       background: transparent !important;
       border-color: transparent !important;
     }
+
     .flatpickr-calendar .flatpickr-day.prevMonthDay,
     .flatpickr-calendar .flatpickr-day.nextMonthDay {
       color: var(--color-text-muted) !important;
       opacity: 0.5;
     }
-    .flatpickr-calendar.arrowTop::before { border-bottom-color: var(--color-border) !important; }
-    .flatpickr-calendar.arrowTop::after { border-bottom-color: var(--color-surface) !important; }
-    .flatpickr-calendar.arrowBottom::before { border-top-color: var(--color-border) !important; }
-    .flatpickr-calendar.arrowBottom::after { border-top-color: var(--color-surface) !important; }
+
+    .flatpickr-calendar.arrowTop::before {
+      border-bottom-color: var(--color-border) !important;
+    }
+
+    .flatpickr-calendar.arrowTop::after {
+      border-bottom-color: var(--color-surface) !important;
+    }
+
+    .flatpickr-calendar.arrowBottom::before {
+      border-top-color: var(--color-border) !important;
+    }
+
+    .flatpickr-calendar.arrowBottom::after {
+      border-top-color: var(--color-surface) !important;
+    }
   </style>
 </head>
 
@@ -2718,15 +2791,15 @@
         </div>
         <div style="text-align:center; margin-top:1.5rem;">
           <button class="btn btn-outline" id="galleryCollapseBtn">
-            <i class="fa-solid fa-chevron-up"></i> Sakrij galeriju
+            <i class="fa-solid fa-chevron-up"></i> <span data-i18n="gal-hide-btn">Sakrij galeriju</span>
           </button>
         </div>
       </div>
 
     </div><!-- /container -->
-    <div style="display:block; width:100%; text-align:center; padding: 2.5rem 0 0.5rem; position:relative; z-index:1;">
+    <div class="gallery-cta-wrap">
       <a href="#rezervacija" class="btn btn-primary">
-        <i class="fa-brands fa-whatsapp"></i> Sviđa mi se — Rezerviraj!
+        <i class="fa-brands fa-whatsapp"></i> <span data-i18n="gal-book-cta">Sviđa mi se — Rezerviraj!</span>
       </a>
     </div>
   </section>
@@ -2746,7 +2819,7 @@
           <h4 class="amenity-group-title"><i class="fa-solid fa-bath"></i> <span
               data-i18n="am-bath-title">Kupaonica</span></h4>
           <ul class="amenity-list">
-            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bath-1">Sušilo za kosu</span></li>
+            <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bath-1">Fen za kosu</span></li>
             <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bath-2">Šampon i regenerator</span></li>
             <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bath-3">Gel za tuširanje</span></li>
             <li><i class="fa-solid fa-check"></i> <span data-i18n="am-bath-4">Sapun i toaletni papir</span></li>
@@ -2875,10 +2948,12 @@
               <div class="form-group">
                 <label for="checkin" data-i18n="form-checkin">Prijava</label>
                 <input type="text" id="checkin" name="checkin" autocomplete="off" placeholder="dd/mm/yyyy" />
+                <small class="field-error-msg"></small>
               </div>
               <div class="form-group">
                 <label for="checkout" data-i18n="form-checkout">Odjava</label>
                 <input type="text" id="checkout" name="checkout" autocomplete="off" placeholder="dd/mm/yyyy" />
+                <small class="field-error-msg"></small>
               </div>
             </div>
 
@@ -2891,6 +2966,7 @@
               <div class="form-group">
                 <label for="ime" data-i18n="form-name-label">Ime i prezime</label>
                 <input type="text" id="ime" placeholder="Vaše ime" data-i18n-placeholder="form-name-ph" />
+                <small class="field-error-msg"></small>
               </div>
               <div class="form-group">
                 <label for="gosti" data-i18n="form-guests-label">Broj gostiju</label>
@@ -2905,6 +2981,7 @@
             <div class="form-group">
               <label for="email" data-i18n="form-email-label">Email (opciono)</label>
               <input type="email" id="email" placeholder="vasa@email.com" data-i18n-placeholder="form-email-ph" />
+              <small class="field-error-msg"></small>
             </div>
 
             <div class="form-group">
@@ -2950,7 +3027,8 @@
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="review-text" data-i18n="rev-t1">Prekrasan bijeg od gradskog života. Etno konoba je nešto posebno — večerali smo uz
+            <p class="review-text" data-i18n="rev-t1">Prekrasan bijeg od gradskog života. Etno konoba je nešto posebno —
+              večerali smo uz
               svijeće i glazbu, kao da smo se vratili u prošlost. Sigurno ćemo se vratiti!</p>
             <div class="review-footer">
               <div class="review-author">
@@ -2967,7 +3045,8 @@
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="review-text" data-i18n="rev-t2">Apartman je prekrasno uređen, besprijekorno čist i prostran. Domaćica je bila
+            <p class="review-text" data-i18n="rev-t2">Apartman je prekrasno uređen, besprijekorno čist i prostran.
+              Domaćica je bila
               nevjerojatno ljubazna i odgovorila je na svako pitanje u roku od nekoliko minuta. Okruženje je mirno, a
               priroda predivna.</p>
             <div class="review-footer">
@@ -2985,7 +3064,8 @@
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="review-text" data-i18n="rev-t3">Roštilj u dvorištu, tišina, zvjezdano nebo — upravo ono što smo tražili. Djeca su
+            <p class="review-text" data-i18n="rev-t3">Roštilj u dvorištu, tišina, zvjezdano nebo — upravo ono što smo
+              tražili. Djeca su
               obožavala konobu sa svojim igrama i svjetlosnim/zvučnim efektima. Savršeno za obitelji ili parove.</p>
             <div class="review-footer">
               <div class="review-author">
@@ -3002,7 +3082,8 @@
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="review-text" data-i18n="rev-t4">Mir i tišina kakvu dugo nisam doživio. Dvorište je savršeno za jutarnju kavu, a
+            <p class="review-text" data-i18n="rev-t4">Mir i tišina kakvu dugo nisam doživio. Dvorište je savršeno za
+              jutarnju kavu, a
               konoba za večernje opuštanje. Preporučujem svima koji bježe od gradske buke.</p>
             <div class="review-footer">
               <div class="review-author">
@@ -3142,7 +3223,7 @@
       <div style="text-align:center; margin-top:1rem;">
         <a href="https://www.google.com/maps/place/Dr.+Ante+Star%C4%8Devi%C4%87a+9,+21260,+Podbablje+Gornje/@43.4044016,17.1909209,206m/data=!3m1!1e3!4m6!3m5!1s0x134adde399ff0ba9:0x2d77134d8493d174!8m2!3d43.4044338!4d17.1909257!16s%2Fg%2F11rqxy04nb?hl=hr"
           target="_blank" rel="noopener" class="btn btn-primary" style="font-size:0.85rem; padding:0.65rem 1.6rem;">
-          <i class="fa-solid fa-diamond-turn-right"></i> Navigiraj — Google Maps
+          <i class="fa-solid fa-diamond-turn-right"></i> <span data-i18n="map-btn">Navigiraj — Google Maps</span>
         </a>
       </div>
     </div>
@@ -3205,7 +3286,7 @@
       </div>
 
       <div class="footer-bottom">
-        <p data-i18n="footer-copy">© 2025 Apartment Antonia · Podbablje Gornje, Hrvatska</p>
+        <p data-i18n="footer-copy">© 2026 Apartment Antonia · Podbablje Gornje, Hrvatska</p>
       </div>
     </div>
   </footer>
@@ -3304,24 +3385,24 @@
         maxDate: maxDate,
         disableMobile: true, // Prevents native mobile picker
         locale: document.documentElement.lang === 'en' ? 'en' : (document.documentElement.lang === 'de' ? 'de' : 'hr'),
-        onChange: function(selectedDates, dateStr, instance) {
+        onChange: function (selectedDates, dateStr, instance) {
           if (selectedDates.length > 0) {
             const minOut = new Date(selectedDates[0]);
             minOut.setDate(minOut.getDate() + MIN_NIGHTS);
             checkoutFp.set('minDate', minOut);
-            
+
             if (checkoutFp.selectedDates.length > 0 && checkoutFp.selectedDates[0] < minOut) {
               checkoutFp.clear();
             }
             updateNights();
             clearFieldError(checkinEl);
-            
+
             // Open checkout picker immediately after selecting checkin
             setTimeout(() => checkoutFp.open(), 100);
           } else {
-             checkoutFp.set('minDate', null);
-             checkoutFp.clear();
-             updateNights();
+            checkoutFp.set('minDate', null);
+            checkoutFp.clear();
+            updateNights();
           }
         }
       });
@@ -3334,9 +3415,9 @@
         maxDate: maxDate,
         disableMobile: true,
         locale: document.documentElement.lang === 'en' ? 'en' : (document.documentElement.lang === 'de' ? 'de' : 'hr'),
-        onChange: function(selectedDates, dateStr, instance) {
-           updateNights();
-           clearFieldError(checkoutEl);
+        onChange: function (selectedDates, dateStr, instance) {
+          updateNights();
+          clearFieldError(checkoutEl);
         }
       });
 
@@ -3358,22 +3439,22 @@
         if (nights > 0) {
           const total = nights * PRICE_PER_NIGHT;
           const warn = nights < MIN_NIGHTS;
-          
+
           let text = '';
           if (lang === 'en') {
-            text = warn 
+            text = warn
               ? `${nights} nights — ⚠️ Minimum ${MIN_NIGHTS} nights`
               : `${nights} nights × ${PRICE_PER_NIGHT}€ = ${total}€`;
           } else if (lang === 'de') {
-            text = warn 
+            text = warn
               ? `${nights} Nächte — ⚠️ Mindestens ${MIN_NIGHTS} Nächte`
               : `${nights} Nächte × ${PRICE_PER_NIGHT}€ = ${total}€`;
           } else {
-            text = warn 
+            text = warn
               ? `${nights} noćenja — ⚠️ Minimalno ${MIN_NIGHTS} noćenja`
               : `${nights} noćenja × ${PRICE_PER_NIGHT}€ = ${total}€`;
           }
-          
+
           nightsText.textContent = text;
           nightsDisp.style.display = 'flex';
           nightsDisp.style.color = warn ? '#c0392b' : 'var(--color-primary)';
@@ -3384,18 +3465,45 @@
 
       /* ── Field-level visual feedback ── */
       function setFieldError(el, msg) {
-        el.style.borderColor = '#e74c3c';
-        el.style.boxShadow = '0 0 0 2px rgba(231,76,60,0.18)';
+        const targetEl = el._flatpickr ? el._flatpickr.altInput : el;
+        targetEl.style.borderColor = '#e74c3c';
+        targetEl.style.boxShadow = '0 0 0 2px rgba(231,76,60,0.18)';
         el.dataset.errMsg = msg;
+        const parent = el.closest('.form-group');
+        if (parent) {
+          const errEl = parent.querySelector('.field-error-msg');
+          if (errEl) {
+            errEl.textContent = msg;
+            errEl.style.display = 'block';
+          }
+        }
       }
       function clearFieldError(el) {
-        el.style.borderColor = '';
-        el.style.boxShadow = '';
+        const targetEl = el._flatpickr ? el._flatpickr.altInput : el;
+        targetEl.style.borderColor = '';
+        targetEl.style.boxShadow = '';
         delete el.dataset.errMsg;
+        const parent = el.closest('.form-group');
+        if (parent) {
+          const errEl = parent.querySelector('.field-error-msg');
+          if (errEl) {
+            errEl.textContent = '';
+            errEl.style.display = 'none';
+          }
+        }
       }
       function setFieldOk(el) {
-        el.style.borderColor = 'var(--color-primary)';
-        el.style.boxShadow = '0 0 0 2px rgba(27,67,50,0.12)';
+        const targetEl = el._flatpickr ? el._flatpickr.altInput : el;
+        targetEl.style.borderColor = 'var(--color-primary)';
+        targetEl.style.boxShadow = '0 0 0 2px rgba(27,67,50,0.12)';
+        const parent = el.closest('.form-group');
+        if (parent) {
+          const errEl = parent.querySelector('.field-error-msg');
+          if (errEl) {
+            errEl.textContent = '';
+            errEl.style.display = 'none';
+          }
+        }
       }
 
       /* Live name validation */
@@ -3404,14 +3512,16 @@
         else { clearFieldError(imeEl); }
       });
       imeEl.addEventListener('blur', () => {
-        if (!imeEl.value.trim()) setFieldError(imeEl, 'Unesite ime i prezime');
+        const lang = document.documentElement.lang || 'hr';
+        if (!imeEl.value.trim()) setFieldError(imeEl, errorMsgs.nameFieldError[lang]);
       });
 
       /* Live email validation (optional field) */
       emailEl.addEventListener('blur', () => {
         const v = emailEl.value.trim();
+        const lang = document.documentElement.lang || 'hr';
         if (v && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(v)) {
-          setFieldError(emailEl, 'Neispravan format email adrese');
+          setFieldError(emailEl, errorMsgs.emailFieldError[lang]);
         } else {
           clearFieldError(emailEl);
           if (v) setFieldOk(emailEl);
@@ -3872,6 +3982,8 @@
       "gal-filter-bath": { hr: "Kupaonica", en: "Bathroom", de: "Badezimmer" },
       "gal-filter-ext": { hr: "Eksterijer", en: "Exterior", de: "Außenbereich" },
       "gal-filter-more": { hr: "Dodatno", en: "More", de: "Zusätzliches" },
+      "gal-hide-btn": { hr: "Sakrij galeriju", en: "Hide gallery", de: "Galerie ausblenden" },
+      "gal-book-cta": { hr: "Sviđa mi se — Rezerviraj!", en: "I like it — Book now!", de: "Gefällt mir — Jetzt buchen!" },
 
       // Amenities Header
       "am-eyebrow": { hr: "Što je uključeno", en: "What's included", de: "Was inbegriffen ist" },
@@ -3964,7 +4076,7 @@
       "rev-eyebrow": { hr: "Što kažu gosti", en: "What guests say", de: "Was Gäste sagen" },
       "rev-title": { hr: "Recenzije", en: "Reviews", de: "Bewertungen" },
       "rev-sub": { hr: "Ocjena 5.0 ⭐ · Gosti se uvijek rado vraćaju", en: "Rating 5.0 ⭐ · Guests always love to return", de: "Bewertung 5.0 ⭐ · Gäste kommen immer wieder gerne zurück" },
-      
+
       // Reviews Content
       "rev-t1": {
         hr: "Prekrasan bijeg od gradskog života. Etno konoba je nešto posebno — večerali smo uz svijeće i glazbu, kao da smo se vratili u prošlost. Sigurno ćemo se vratiti!",
@@ -4030,6 +4142,7 @@
       "map-eyebrow": { hr: "Kako doći do nas", en: "How to find us", de: "Wie Sie uns finden" },
       "map-title": { hr: "Lokacija", en: "Location", de: "Lage" },
       "map-sub": { hr: "Podbablje Gornje, Imotski · 30 km do mora · Besplatan parking", en: "Podbablje Gornje, Imotski · 30 km to the sea · Free parking", de: "Podbablje Gornje, Imotski · 30 km zum Meer · Kostenloser Parkplatz" },
+      "map-btn": { hr: "Navigiraj — Google Maps", en: "Navigate — Google Maps", de: "Navigieren — Google Maps" },
       "map-pill-1": { hr: "Podbablje Gornje, Imotski, HR", en: "Podbablje Gornje, Imotski, HR", de: "Podbablje Gornje, Imotski, HR" },
       "map-pill-2": { hr: "30 km do Makarske rivijere", en: "30 km to Makarska Riviera", de: "30 km zur Makarska Riviera" },
       "map-pill-3": { hr: "7 km do jezera", en: "7 km to the lake", de: "7 km zum See" },
@@ -4042,7 +4155,7 @@
       "footer-addr": { hr: "Podbablje Gornje<br>Imotski, Hrvatska", en: "Podbablje Gornje<br>Imotski, Croatia", de: "Podbablje Gornje<br>Imotski, Kroatien" },
       "footer-reply": { hr: "Odgovor u roku od 1 sata", en: "Reply within 1 hour", de: "Antwort innerhalb von 1 Stunde" },
       "footer-btn": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Pošalji upit", en: "<i class=\"fa-brands fa-whatsapp\"></i> Send inquiry", de: "<i class=\"fa-brands fa-whatsapp\"></i> Anfrage senden" },
-      "footer-copy": { hr: "© 2025 Apartment Antonia · Podbablje Gornje, Hrvatska", en: "© 2025 Apartment Antonia · Podbablje Gornje, Croatia", de: "© 2025 Apartment Antonia · Podbablje Gornje, Kroatien" }
+      "footer-copy": { hr: "© 2026 Apartment Antonia · Podbablje Gornje, Hrvatska", en: "© 2026 Apartment Antonia · Podbablje Gornje, Croatia", de: "© 2026 Apartment Antonia · Podbablje Gornje, Kroatien" }
     };
 
     (function () {
@@ -4075,7 +4188,7 @@
 
         // Update document lang
         document.documentElement.lang = lang;
-        
+
         // Update Flatpickr locales if initialized
         if (window.checkinFp && window.checkoutFp) {
           const fpLoc = lang === 'en' ? 'en' : (lang === 'de' ? 'de' : 'hr');
