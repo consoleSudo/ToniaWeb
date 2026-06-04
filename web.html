@@ -31,6 +31,7 @@
   <!-- Flatpickr JS -->
   <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
   <script src="https://npmcdn.com/flatpickr/dist/l10n/hr.js"></script>
+  <script src="https://npmcdn.com/flatpickr/dist/l10n/de.js"></script>
 
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
@@ -401,48 +402,61 @@
       margin-left: 0.5rem;
     }
 
-    .lang-btn {
-      background: rgba(255, 255, 255, 0.1);
-      border: 1px solid rgba(255, 255, 255, 0.2);
-      color: rgba(255, 255, 255, 0.85);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.75rem;
-      font-weight: 500;
-      padding: 0.35rem 0.6rem;
-      border-radius: 4px;
-      cursor: pointer;
-      display: flex;
-      gap: 0.4rem;
+    /* Premium Language Switcher Box */
+    .lang-switcher-box {
+      display: inline-flex;
       align-items: center;
-      transition: all 0.25s ease;
+      background: rgba(255, 255, 255, 0.06);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 0.25rem;
+      border-radius: 30px;
+      gap: 0.2rem;
+    }
+
+    .nav.scrolled .lang-switcher-box {
+      background: rgba(0, 0, 0, 0.04);
+      border-color: var(--color-border);
+    }
+
+    .lang-btn {
+      background: transparent;
+      border: none;
+      color: rgba(255, 255, 255, 0.65);
+      font-family: 'DM Sans', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      padding: 0.4rem 0.85rem;
+      border-radius: 20px;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: inline-block;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+
+    .lang-btn:hover {
+      color: #ffffff;
+      background: rgba(255, 255, 255, 0.1);
+    }
+
+    .lang-btn.active {
+      background: var(--color-primary);
+      color: var(--color-cta-text) !important;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
     }
 
     .nav.scrolled .lang-btn {
       color: var(--color-text-muted);
-      border-color: var(--color-border);
-      background: transparent;
-    }
-
-    .lang-btn:hover {
-      background: rgba(255, 255, 255, 0.2);
     }
 
     .nav.scrolled .lang-btn:hover {
-      background: rgba(0, 0, 0, 0.05);
+      color: var(--color-text);
+      background: rgba(0, 0, 0, 0.04);
     }
 
-    .lang-opt {
-      opacity: 0.5;
-      transition: opacity 0.2s;
-    }
-
-    .lang-opt.active {
-      opacity: 1;
-      font-weight: 700;
-    }
-
-    .lang-sep {
-      opacity: 0.3;
+    .nav.scrolled .lang-btn.active {
+      background: var(--color-primary);
+      color: var(--color-cta-text) !important;
     }
 
     /* Hamburger */
@@ -496,6 +510,10 @@
         padding: 0.75rem 2rem;
         color: var(--color-text-muted) !important;
         border-bottom: 1px solid var(--color-border);
+      }
+
+      .lang-switch-wrap {
+        padding: 0.75rem 2rem;
       }
 
       .nav-toggle {
@@ -2362,11 +2380,11 @@
 
       <!-- LANG SWITCHER -->
       <li class="lang-switch-wrap">
-        <button id="langToggle" class="lang-btn">
-          <span class="lang-opt active" data-lang="hr">HR</span>
-          <span class="lang-sep">|</span>
-          <span class="lang-opt" data-lang="en">EN</span>
-        </button>
+        <div class="lang-switcher-box">
+          <button class="lang-btn active" data-lang="hr">HR</button>
+          <button class="lang-btn" data-lang="en">EN</button>
+          <button class="lang-btn" data-lang="de">DE</button>
+        </div>
       </li>
     </ul>
     <button class="nav-toggle" id="navToggle" aria-label="Open menu">
@@ -2879,12 +2897,12 @@
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="review-text">Prekrasan bijeg od gradskog života. Etno konoba je nešto posebno — večerali smo uz
+            <p class="review-text" data-i18n="rev-t1">Prekrasan bijeg od gradskog života. Etno konoba je nešto posebno — večerali smo uz
               svijeće i glazbu, kao da smo se vratili u prošlost. Sigurno ćemo se vratiti!</p>
             <div class="review-footer">
               <div class="review-author">
                 <span class="review-name">Maja K. 🇭🇷</span>
-                <span class="review-meta">Srpanj 2024. · 5 noćenja</span>
+                <span class="review-meta" data-i18n="rev-m1">Srpanj 2024. · 5 noćenja</span>
               </div>
             </div>
           </div>
@@ -2896,13 +2914,13 @@
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="review-text">Apartman je prekrasno uređen, besprijekorno čist i prostran. Domaćica je bila
+            <p class="review-text" data-i18n="rev-t2">Apartman je prekrasno uređen, besprijekorno čist i prostran. Domaćica je bila
               nevjerojatno ljubazna i odgovorila je na svako pitanje u roku od nekoliko minuta. Okruženje je mirno, a
               priroda predivna.</p>
             <div class="review-footer">
               <div class="review-author">
                 <span class="review-name">Thomas B. 🇩🇪</span>
-                <span class="review-meta">Kolovoz 2024. · 7 noćenja</span>
+                <span class="review-meta" data-i18n="rev-m2">Kolovoz 2024. · 7 noćenja</span>
               </div>
             </div>
           </div>
@@ -2914,12 +2932,12 @@
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="review-text">Roštilj u dvorištu, tišina, zvjezdano nebo — upravo ono što smo tražili. Djeca su
+            <p class="review-text" data-i18n="rev-t3">Roštilj u dvorištu, tišina, zvjezdano nebo — upravo ono što smo tražili. Djeca su
               obožavala konobu sa svojim igrama i svjetlosnim/zvučnim efektima. Savršeno za obitelji ili parove.</p>
             <div class="review-footer">
               <div class="review-author">
                 <span class="review-name">Ana & Petar S. 🇷🇸</span>
-                <span class="review-meta">Lipanj 2024. · 6 noćenja</span>
+                <span class="review-meta" data-i18n="rev-m3">Lipanj 2024. · 6 noćenja</span>
               </div>
             </div>
           </div>
@@ -2931,12 +2949,12 @@
               <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
               <i class="fa-solid fa-star"></i>
             </div>
-            <p class="review-text">Mir i tišina kakvu dugo nisam doživio. Dvorište je savršeno za jutarnju kavu, a
+            <p class="review-text" data-i18n="rev-t4">Mir i tišina kakvu dugo nisam doživio. Dvorište je savršeno za jutarnju kavu, a
               konoba za večernje opuštanje. Preporučujem svima koji bježe od gradske buke.</p>
             <div class="review-footer">
               <div class="review-author">
                 <span class="review-name">Luca M. 🇮🇹</span>
-                <span class="review-meta">Kolovoz 2024. · 5 noćenja</span>
+                <span class="review-meta" data-i18n="rev-m4">Kolovoz 2024. · 5 noćenja</span>
               </div>
             </div>
           </div>
@@ -3225,7 +3243,7 @@
         minDate: today,
         maxDate: maxDate,
         disableMobile: true, // Prevents native mobile picker
-        locale: document.documentElement.lang === 'en' ? 'en' : 'hr',
+        locale: document.documentElement.lang === 'en' ? 'en' : (document.documentElement.lang === 'de' ? 'de' : 'hr'),
         onChange: function(selectedDates, dateStr, instance) {
           if (selectedDates.length > 0) {
             const minOut = new Date(selectedDates[0]);
@@ -3255,7 +3273,7 @@
         minDate: today,
         maxDate: maxDate,
         disableMobile: true,
-        locale: document.documentElement.lang === 'en' ? 'en' : 'hr',
+        locale: document.documentElement.lang === 'en' ? 'en' : (document.documentElement.lang === 'de' ? 'de' : 'hr'),
         onChange: function(selectedDates, dateStr, instance) {
            updateNights();
            clearFieldError(checkoutEl);
@@ -3276,12 +3294,27 @@
 
       function updateNights() {
         const nights = calcNights();
+        const lang = document.documentElement.lang || 'hr';
         if (nights > 0) {
           const total = nights * PRICE_PER_NIGHT;
           const warn = nights < MIN_NIGHTS;
-          nightsText.textContent = warn
-            ? `${nights} noćenja — ⚠️ Minimalno ${MIN_NIGHTS} noćenja`
-            : `${nights} noćenja × ${PRICE_PER_NIGHT}€ = ${total}€`;
+          
+          let text = '';
+          if (lang === 'en') {
+            text = warn 
+              ? `${nights} nights — ⚠️ Minimum ${MIN_NIGHTS} nights`
+              : `${nights} nights × ${PRICE_PER_NIGHT}€ = ${total}€`;
+          } else if (lang === 'de') {
+            text = warn 
+              ? `${nights} Nächte — ⚠️ Mindestens ${MIN_NIGHTS} Nächte`
+              : `${nights} Nächte × ${PRICE_PER_NIGHT}€ = ${total}€`;
+          } else {
+            text = warn 
+              ? `${nights} noćenja — ⚠️ Minimalno ${MIN_NIGHTS} noćenja`
+              : `${nights} noćenja × ${PRICE_PER_NIGHT}€ = ${total}€`;
+          }
+          
+          nightsText.textContent = text;
           nightsDisp.style.display = 'flex';
           nightsDisp.style.color = warn ? '#c0392b' : 'var(--color-primary)';
         } else {
@@ -3327,6 +3360,59 @@
       emailEl.addEventListener('input', () => { if (!emailEl.value.trim()) clearFieldError(emailEl); });
 
       /* ── Submit / Send ── */
+      const errorMsgs = {
+        nameEmpty: {
+          hr: '⚠️ Molimo unesite svoje ime i prezime.',
+          en: '⚠️ Please enter your full name.',
+          de: '⚠️ Bitte geben Sie Ihren vollständigen Namen ein.'
+        },
+        nameFieldError: {
+          hr: 'Unesite ime i prezime',
+          en: 'Enter full name',
+          de: 'Name eingeben'
+        },
+        checkinEmpty: {
+          hr: '⚠️ Molimo odaberite datum prijave.',
+          en: '⚠️ Please select a check-in date.',
+          de: '⚠️ Bitte wählen Sie ein Anreisedatum.'
+        },
+        checkinFieldError: {
+          hr: 'Odaberite datum prijave',
+          en: 'Select check-in date',
+          de: 'Anreisedatum auswählen'
+        },
+        checkoutEmpty: {
+          hr: '⚠️ Molimo odaberite datum odjave.',
+          en: '⚠️ Please select a check-out date.',
+          de: '⚠️ Bitte wählen Sie ein Abreisedatum.'
+        },
+        checkoutFieldError: {
+          hr: 'Odaberite datum odjave',
+          en: 'Select check-out date',
+          de: 'Abreisedatum auswählen'
+        },
+        minNights: {
+          hr: `⚠️ Minimalni boravak je ${MIN_NIGHTS} noćenja.`,
+          en: `⚠️ Minimum stay is ${MIN_NIGHTS} nights.`,
+          de: `⚠️ Mindestaufenthalt beträgt ${MIN_NIGHTS} Nächte.`
+        },
+        minNightsFieldError: {
+          hr: `Minimalno ${MIN_NIGHTS} noćenja`,
+          en: `Minimum ${MIN_NIGHTS} nights`,
+          de: `Mindestens ${MIN_NIGHTS} Nächte`
+        },
+        emailInvalid: {
+          hr: '⚠️ Neispravan format email adrese.',
+          en: '⚠️ Invalid email format.',
+          de: '⚠️ Ungültiges E-Mail-Format.'
+        },
+        emailFieldError: {
+          hr: 'Neispravan email',
+          en: 'Invalid email',
+          de: 'Ungültige E-Mail'
+        }
+      };
+
       sendBtn.addEventListener('click', () => {
         formError.textContent = '';
         let firstError = null;
@@ -3342,32 +3428,32 @@
 
         // Validate name
         if (!ime) {
-          setFieldError(imeEl, lang === 'en' ? 'Enter full name' : 'Unesite ime i prezime');
-          firstError = firstError || (lang === 'en' ? '⚠️ Please enter your full name.' : '⚠️ Molimo unesite svoje ime i prezime.');
+          setFieldError(imeEl, errorMsgs.nameFieldError[lang]);
+          firstError = firstError || errorMsgs.nameEmpty[lang];
         } else setFieldOk(imeEl);
 
         // Validate check-in
         if (!checkinEl.value) {
-          setFieldError(checkinEl, lang === 'en' ? 'Select check-in date' : 'Odaberite datum prijave');
-          firstError = firstError || (lang === 'en' ? '⚠️ Please select a check-in date.' : '⚠️ Molimo odaberite datum prijave.');
+          setFieldError(checkinEl, errorMsgs.checkinFieldError[lang]);
+          firstError = firstError || errorMsgs.checkinEmpty[lang];
         } else setFieldOk(checkinEl);
 
         // Validate check-out
         if (!checkoutEl.value) {
-          setFieldError(checkoutEl, lang === 'en' ? 'Select check-out date' : 'Odaberite datum odjave');
-          firstError = firstError || (lang === 'en' ? '⚠️ Please select a check-out date.' : '⚠️ Molimo odaberite datum odjave.');
+          setFieldError(checkoutEl, errorMsgs.checkoutFieldError[lang]);
+          firstError = firstError || errorMsgs.checkoutEmpty[lang];
         } else setFieldOk(checkoutEl);
 
         // Validate min nights (only if both dates present)
         if (checkinEl.value && checkoutEl.value && nights < MIN_NIGHTS) {
-          setFieldError(checkoutEl, lang === 'en' ? `Minimum ${MIN_NIGHTS} nights` : `Minimalno ${MIN_NIGHTS} noćenja`);
-          firstError = firstError || (lang === 'en' ? `⚠️ Minimum stay is ${MIN_NIGHTS} nights.` : `⚠️ Minimalni boravak je ${MIN_NIGHTS} noćenja.`);
+          setFieldError(checkoutEl, errorMsgs.minNightsFieldError[lang]);
+          firstError = firstError || errorMsgs.minNights[lang];
         }
 
         // Validate email format if provided
         if (email && !/^[^@\s]+@[^@\s]+\.[^@\s]+$/.test(email)) {
-          setFieldError(emailEl, lang === 'en' ? 'Invalid email' : 'Neispravan email');
-          firstError = firstError || (lang === 'en' ? '⚠️ Invalid email format.' : '⚠️ Neispravan format email adrese.');
+          setFieldError(emailEl, errorMsgs.emailFieldError[lang]);
+          firstError = firstError || errorMsgs.emailInvalid[lang];
         }
 
         if (firstError) {
@@ -3395,6 +3481,17 @@
           msg += `🐾 Pet: ${ljubimac ? 'Yes' : 'No'}\n`;
           if (email) msg += `📧 Email: ${email}\n`;
           if (napomena) msg += `📝 Note: ${napomena}\n`;
+        } else if (lang === 'de') {
+          msg = `Hallo Antonia! 👋\n\n`;
+          msg += `Ich interessiere mich für die Buchung des Apartments:\n`;
+          msg += `👤 Name: ${ime}\n`;
+          msg += `📅 Check-in: ${fmtDate(checkinEl.value)}\n`;
+          msg += `📅 Check-out: ${fmtDate(checkoutEl.value)}\n`;
+          msg += `🌙 Nächte: ${nights} × ${PRICE_PER_NIGHT}€ = *${total}€*\n`;
+          msg += `👥 Gäste: ${gosti}\n`;
+          msg += `🐾 Haustier: ${ljubimac ? 'Ja' : 'Nein'}\n`;
+          if (email) msg += `📧 E-Mail: ${email}\n`;
+          if (napomena) msg += `📝 Anmerkung: ${napomena}\n`;
         } else {
           msg = `Pozdrav Antonia! 👋\n\n`;
           msg += `Zanimam se za rezervaciju apartmana:\n`;
@@ -3668,187 +3765,228 @@
   <script>
     const translations = {
       // Nav & Hero
-      "nav-logo": { hr: "Apartment Antonia", en: "Apartment Antonia" },
-      "nav-about": { hr: "O apartmanu", en: "About" },
-      "nav-gallery": { hr: "Galerija", en: "Gallery" },
-      "nav-amenities": { hr: "Sadržaji", en: "Amenities" },
-      "nav-reviews": { hr: "Recenzije", en: "Reviews" },
-      "nav-faq": { hr: "FAQ", en: "FAQ" },
-      "nav-map": { hr: "Lokacija", en: "Location" },
-      "nav-book": { hr: "Rezerviraj", en: "Book Now" },
+      "nav-logo": { hr: "Apartment Antonia", en: "Apartment Antonia", de: "Apartment Antonia" },
+      "nav-about": { hr: "O apartmanu", en: "About", de: "Über uns" },
+      "nav-gallery": { hr: "Galerija", en: "Gallery", de: "Galerie" },
+      "nav-amenities": { hr: "Sadržaji", en: "Amenities", de: "Ausstattung" },
+      "nav-reviews": { hr: "Recenzije", en: "Reviews", de: "Bewertungen" },
+      "nav-faq": { hr: "FAQ", en: "FAQ", de: "FAQ" },
+      "nav-map": { hr: "Lokacija", en: "Location", de: "Lage" },
+      "nav-book": { hr: "Rezerviraj", en: "Book Now", de: "Jetzt buchen" },
 
-      "hero-eyebrow": { hr: "Podbablje · Imotski · 30 km od mora", en: "Podbablje · Imotski · 30 km from the sea" },
-      "hero-title": { hr: "Antonia", en: "Antonia" },
-      "hero-sub": { hr: "Privatna oaza za 3 gosta · Etno konoba · Dvorište · Roštilj", en: "Private oasis for 3 guests · Ethno tavern · Courtyard · BBQ" },
-      "hero-btn-book": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Rezerviraj izravno", en: "<i class=\"fa-brands fa-whatsapp\"></i> Book directly" },
-      "hero-btn-gallery": { hr: "<i class=\"fa-regular fa-images\"></i> Pogledaj galeriju", en: "<i class=\"fa-regular fa-images\"></i> View gallery" },
-      "hero-scroll": { hr: "Pomakni", en: "Scroll" },
+      "hero-eyebrow": { hr: "Podbablje · Imotski · 30 km od mora", en: "Podbablje · Imotski · 30 km from the sea", de: "Podbablje · Imotski · 30 km vom Meer" },
+      "hero-title": { hr: "Antonia", en: "Antonia", de: "Antonia" },
+      "hero-sub": { hr: "Privatna oaza za 3 gosta · Etno konoba · Dvorište · Roštilj", en: "Private oasis for 3 guests · Ethno tavern · Courtyard · BBQ", de: "Private Oase für 3 Gäste · Ethno-Taverne · Innenhof · Grill" },
+      "hero-btn-book": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Rezerviraj izravno", en: "<i class=\"fa-brands fa-whatsapp\"></i> Book directly", de: "<i class=\"fa-brands fa-whatsapp\"></i> Direkt buchen" },
+      "hero-btn-gallery": { hr: "<i class=\"fa-regular fa-images\"></i> Pogledaj galeriju", en: "<i class=\"fa-regular fa-images\"></i> View gallery", de: "<i class=\"fa-regular fa-images\"></i> Galerie ansehen" },
+      "hero-scroll": { hr: "Pomakni", en: "Scroll", de: "Scrollen" },
 
       // Proof Bar
-      "proof-rating": { hr: "Ocjena 5.0 ⭐", en: "Rating 5.0 ⭐" },
-      "proof-pets": { hr: "Kućni ljubimci dobrodošli", en: "Pets welcome" },
-      "proof-parking": { hr: "Besplatan Parking", en: "Free Parking" },
-      "proof-sea": { hr: "30km do mora", en: "30km from sea" },
-      "proof-reply": { hr: "Odgovor u roku od 1h", en: "Reply within 1h" },
+      "proof-rating": { hr: "Ocjena 5.0 ⭐", en: "Rating 5.0 ⭐", de: "Bewertung 5.0 ⭐" },
+      "proof-pets": { hr: "Kućni ljubimci dobrodošli", en: "Pets welcome", de: "Haustiere willkommen" },
+      "proof-parking": { hr: "Besplatan Parking", en: "Free Parking", de: "Kostenloser Parkplatz" },
+      "proof-sea": { hr: "30km do mora", en: "30km from sea", de: "30km zum Meer" },
+      "proof-reply": { hr: "Odgovor u roku od 1h", en: "Reply within 1h", de: "Antwort innerhalb 1 Std." },
 
       // About
-      "about-exp": { hr: "godine<br>iskustva", en: "years of<br>experience" },
-      "about-eyebrow": { hr: "O apartmanu", en: "About the apartment" },
-      "about-title": { hr: "Više od apartmana —<br><em>doživljaj</em>", en: "More than an apartment —<br><em>an experience</em>" },
-      "about-desc": { hr: "Opustite se u ugodnom i moderno uređenom smještaju, smještenom svega 30 km od mora. Na raspolaganju su vam privatni ulaz, potpuno opremljena kuhinja, dnevni boravak, spavaća soba i kupaonica.<br>Uživajte u privatnom dvorištu, vanjskom roštilju te prostoriji za zabavu sa zvučnim i svjetlosnim efektima. Idealan izbor za parove koji traže mir, privatnost i potpuni odmor.", en: "Relax in a cozy and modernly decorated accommodation, located just 30 km from the sea. You have at your disposal a private entrance, a fully equipped kitchen, a living room, a bedroom and a bathroom.<br>Enjoy the private courtyard, outdoor barbecue, and an entertainment room with sound and light effects. An ideal choice for couples looking for peace, privacy, and complete relaxation." },
-      "about-list-1": { hr: "Okružen prirodom i šumom,", en: "Surrounded by nature and forest," },
-      "about-list-2": { hr: "udaljen svega 3 km od rijeke,", en: "only 3 km from the river," },
-      "about-list-3": { hr: "7 km od jezera i 30 km od mora.", en: "7 km from the lake and 30 km from the sea." },
-      "about-list-4": { hr: "Restoran 400 m, dućan 1 km.", en: "Restaurant 400 m, shop 1 km." },
-      "about-btn": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Provjeri dostupnost", en: "<i class=\"fa-brands fa-whatsapp\"></i> Check availability" },
+      "about-exp": { hr: "godine<br>iskustva", en: "years of<br>experience", de: "Jahre<br>Erfahrung" },
+      "about-eyebrow": { hr: "O apartmanu", en: "About the apartment", de: "Über das Apartment" },
+      "about-title": { hr: "Više od apartmana —<br><em>doživljaj</em>", en: "More than an apartment —<br><em>an experience</em>", de: "Mehr als nur ein Apartment —<br><em>ein Erlebnis</em>" },
+      "about-desc": { hr: "Opustite se u ugodnom i moderno uređenom smještaju, smještenom svega 30 km od mora. Na raspolaganju su vam privatni ulaz, potpuno opremljena kuhinja, dnevni boravak, spavaća soba i kupaonica.<br>Uživajte u privatnom dvorištu, vanjskom roštilju te prostoriji za zabavu sa zvučnim i svjetlosnim efektima. Idealan izbor za parove koji traže mir, privatnost i potpuni odmor.", en: "Relax in a cozy and modernly decorated accommodation, located just 30 km from the sea. You have at your disposal a private entrance, a fully equipped kitchen, a living room, a bedroom and a bathroom.<br>Enjoy the private courtyard, outdoor barbecue, and an entertainment room with sound and light effects. An ideal choice for couples looking for peace, privacy, and complete relaxation.", de: "Entspannen Sie sich in einer gemütlichen und modernen Unterkunft, die nur 30 km vom Meer entfernt liegt. Ihnen stehen ein privater Eingang, eine voll ausgestattete Küche, ein Wohnzimmer, ein Schlafzimmer und ein Badezimmer zur Verfügung.<br>Genießen Sie den privaten Innenhof, den Grill im Freien und einen Partyraum mit Sound- und Lichteffekten. Eine ideale Wahl für Paare, die Ruhe, Privatsphäre und völlige Entspannung suchen." },
+      "about-list-1": { hr: "Okružen prirodom i šumom,", en: "Surrounded by nature and forest,", de: "Umgeben von Natur und Wald," },
+      "about-list-2": { hr: "udaljen svega 3 km od rijeke,", en: "only 3 km from the river,", de: "nur 3 km vom Fluss entfernt," },
+      "about-list-3": { hr: "7 km od jezera i 30 km od mora.", en: "7 km from the lake and 30 km from the sea.", de: "7 km vom See und 30 km vom Meer." },
+      "about-list-4": { hr: "Restoran 400 m, dućan 1 km.", en: "Restaurant 400 m, shop 1 km.", de: "Restaurant 400 m, Geschäft 1 km." },
+      "about-btn": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Provjeri dostupnost", en: "<i class=\"fa-brands fa-whatsapp\"></i> Check availability", de: "<i class=\"fa-brands fa-whatsapp\"></i> Verfügbarkeit prüfen" },
 
       // Gallery
-      "gallery-eyebrow": { hr: "Fotografije", en: "Photos" },
-      "gallery-title": { hr: "Istražite prostor", en: "Explore the space" },
-      "gallery-subtitle": { hr: "Moderni apartman na gornjem katu i autentična etno konoba u prizemlju.", en: "Modern apartment on the upper floor and authentic ethno tavern on the ground floor." },
-      "gal-show-all": { hr: "Prikaži sve fotografije", en: "Show all photos" },
-      "gal-filter-all": { hr: "Sve", en: "All" },
-      "gal-filter-living": { hr: "Dnevni boravak", en: "Living room" },
-      "gal-filter-kitchen": { hr: "Kuhinja", en: "Kitchen" },
-      "gal-filter-dining": { hr: "Trpezarija", en: "Dining room" },
-      "gal-filter-bed": { hr: "Spavaća soba", en: "Bedroom" },
-      "gal-filter-bath": { hr: "Kupaonica", en: "Bathroom" },
-      "gal-filter-ext": { hr: "Eksterijer", en: "Exterior" },
-      "gal-filter-more": { hr: "Dodatno", en: "More" },
+      "gallery-eyebrow": { hr: "Fotografije", en: "Photos", de: "Fotos" },
+      "gallery-title": { hr: "Istražite prostor", en: "Explore the space", de: "Erkunden Sie den Raum" },
+      "gallery-subtitle": { hr: "Moderni apartman na gornjem katu i autentična etno konoba u prizemlju.", en: "Modern apartment on the upper floor and authentic ethno tavern on the ground floor.", de: "Modernes Apartment im Obergeschoss und authentische Ethno-Taverne im Erdgeschoss." },
+      "gal-show-all": { hr: "Prikaži sve fotografije", en: "Show all photos", de: "Alle Fotos anzeigen" },
+      "gal-filter-all": { hr: "Sve", en: "All", de: "Alle" },
+      "gal-filter-living": { hr: "Dnevni boravak", en: "Living room", de: "Wohnzimmer" },
+      "gal-filter-kitchen": { hr: "Kuhinja", en: "Kitchen", de: "Küche" },
+      "gal-filter-dining": { hr: "Trpezarija", en: "Dining room", de: "Essbereich" },
+      "gal-filter-bed": { hr: "Spavaća soba", en: "Bedroom", de: "Schlafzimmer" },
+      "gal-filter-bath": { hr: "Kupaonica", en: "Bathroom", de: "Badezimmer" },
+      "gal-filter-ext": { hr: "Eksterijer", en: "Exterior", de: "Außenbereich" },
+      "gal-filter-more": { hr: "Dodatno", en: "More", de: "Zusätzliches" },
 
       // Amenities Header
-      "am-eyebrow": { hr: "Što je uključeno", en: "What's included" },
-      "am-title": { hr: "Sadržaji", en: "Amenities" },
-      "am-sub": { hr: "Sve što vam je potrebno za ugodan boravak — i više od toga.", en: "Everything you need for a comfortable stay — and more." },
+      "am-eyebrow": { hr: "Što je uključeno", en: "What's included", de: "Was inbegriffen ist" },
+      "am-title": { hr: "Sadržaji", en: "Amenities", de: "Ausstattung" },
+      "am-sub": { hr: "Sve što vam je potrebno za ugodan boravak — i više od toga.", en: "Everything you need for a comfortable stay — and more.", de: "Alles, was Sie für einen angenehmen Aufenthalt benötigen — und mehr." },
 
       // Amenities Details
-      "am-bath-title": { hr: "Kupaonica", en: "Bathroom" },
-      "am-bath-1": { hr: "Sušilo za kosu", en: "Hair dryer" },
-      "am-bath-2": { hr: "Šampon i regenerator", en: "Shampoo and conditioner" },
-      "am-bath-3": { hr: "Gel za tuširanje", en: "Shower gel" },
-      "am-bath-4": { hr: "Sapun i toaletni papir", en: "Soap and toilet paper" },
-      "am-bath-5": { hr: "Topla voda", en: "Hot water" },
-      "am-bath-6": { hr: "Sredstva za čišćenje", en: "Cleaning products" },
-      "am-bed-title": { hr: "Spavaća soba", en: "Bedroom" },
-      "am-bed-1": { hr: "Posteljina i ručnici", en: "Bed linens and towels" },
-      "am-bed-2": { hr: "Dodatni jastuci i pokrivači", en: "Extra pillows and blankets" },
-      "am-bed-3": { hr: "Zavjese za zamračivanje", en: "Room-darkening shades" },
-      "am-bed-4": { hr: "Glačalo i vješalice", en: "Iron and hangers" },
-      "am-bed-5": { hr: "Ormar i sef", en: "Closet and safe" },
-      "am-bed-6": { hr: "Mreža protiv komaraca", en: "Mosquito net" },
-      "am-ent-title": { hr: "Zabava", en: "Entertainment" },
-      "am-ent-1": { hr: "TV", en: "TV" },
-      "am-ent-2": { hr: "Zvučni sustav", en: "Sound system" },
-      "am-ent-3": { hr: "Gramofon", en: "Record player" },
-      "am-ent-4": { hr: "Knjige", en: "Books" },
-      "am-ent-5": { hr: "Društvene igre", en: "Board games" },
-      "am-ac-title": { hr: "Grijanje i hlađenje", en: "Heating and cooling" },
-      "am-ac-1": { hr: "Klima uređaj", en: "Air conditioning" },
-      "am-ac-2": { hr: "Grijanje", en: "Heating" },
-      "am-ac-3": { hr: "Prijenosni ventilatori", en: "Portable fans" },
-      "am-kit-title": { hr: "Kuhinja", en: "Kitchen" },
-      "am-kit-1": { hr: "Potpuno opremljena kuhinja", en: "Fully equipped kitchen" },
-      "am-kit-2": { hr: "Hladnjak i zamrzivač", en: "Refrigerator and freezer" },
-      "am-kit-3": { hr: "Pećnica i mikrovalna pećnica", en: "Oven and microwave" },
-      "am-kit-4": { hr: "Perilica posuđa", en: "Dishwasher" },
-      "am-kit-5": { hr: "Aparat za kavu i toster", en: "Coffee maker and toaster" },
-      "am-kit-6": { hr: "Pribor za roštilj", en: "Barbecue utensils" },
-      "am-out-title": { hr: "Vanjski prostor", en: "Outdoor space" },
-      "am-out-1": { hr: "Privatno dvorište", en: "Private courtyard" },
-      "am-out-2": { hr: "Roštilj", en: "BBQ grill" },
-      "am-out-3": { hr: "Vanjska kuhinja", en: "Outdoor kitchen" },
-      "am-out-4": { hr: "Vanjski prostor za sjedenje", en: "Outdoor seating area" },
-      "am-out-5": { hr: "Ognjište", en: "Fire pit" },
-      "am-out-6": { hr: "Bicikli", en: "Bicycles" },
-      "am-gen-title": { hr: "Općenito", en: "General" },
-      "am-gen-1": { hr: "Besplatan WiFi", en: "Free WiFi" },
-      "am-gen-2": { hr: "Besplatan parking", en: "Free parking" },
-      "am-gen-3": { hr: "Privatni ulaz", en: "Private entrance" },
-      "am-gen-4": { hr: "Perilica rublja", en: "Washing machine" },
-      "am-gen-5": { hr: "Vatrogasni aparat", en: "Fire extinguisher" },
-      "am-gen-6": { hr: "Kutija prve pomoći", en: "First aid kit" },
-      "am-spec-title": { hr: "Posebno", en: "Special" },
-      "am-spec-1": { hr: "Dopušteni kućni ljubimci", en: "Pets allowed" },
-      "am-spec-2": { hr: "Dopušteno pušenje", en: "Smoking allowed" },
-      "am-spec-3": { hr: "Dobrodošli dugi boravci", en: "Long term stays allowed" },
-      "am-spec-4": { hr: "Čišćenje na zahtjev", en: "Cleaning on request" },
-      "am-spec-5": { hr: "Pohrana prtljage", en: "Luggage dropoff allowed" },
+      "am-bath-title": { hr: "Kupaonica", en: "Bathroom", de: "Badezimmer" },
+      "am-bath-1": { hr: "Sušilo za kosu", en: "Hair dryer", de: "Haartrockner" },
+      "am-bath-2": { hr: "Šampon i regenerator", en: "Shampoo and conditioner", de: "Shampoo und Spülung" },
+      "am-bath-3": { hr: "Gel za tuširanje", en: "Shower gel", de: "Duschgel" },
+      "am-bath-4": { hr: "Sapun i toaletni papir", en: "Soap and toilet paper", de: "Seife und Toilettenpapier" },
+      "am-bath-5": { hr: "Topla voda", en: "Hot water", de: "Warmwasser" },
+      "am-bath-6": { hr: "Sredstva za čišćenje", en: "Cleaning products", de: "Reinigungsmittel" },
+      "am-bed-title": { hr: "Spavaća soba", en: "Bedroom", de: "Schlafzimmer" },
+      "am-bed-1": { hr: "Posteljina i ručnici", en: "Bed linens and towels", de: "Bettwäsche und Handtücher" },
+      "am-bed-2": { hr: "Dodatni jastuci i pokrivači", en: "Extra pillows and blankets", de: "Zusätzliche Kissen und Decken" },
+      "am-bed-3": { hr: "Zavjese za zamračivanje", en: "Room-darkening shades", de: "Verdunkelungsvorhänge" },
+      "am-bed-4": { hr: "Glačalo i vješalice", en: "Iron and hangers", de: "Bügeleisen und Kleiderbügel" },
+      "am-bed-5": { hr: "Ormar i sef", en: "Closet and safe", de: "Kleiderschrank und Tresor" },
+      "am-bed-6": { hr: "Mreža protiv komaraca", en: "Mosquito net", de: "Moskitonetz" },
+      "am-ent-title": { hr: "Zabava", en: "Entertainment", de: "Unterhaltung" },
+      "am-ent-1": { hr: "TV", en: "TV", de: "Fernseher" },
+      "am-ent-2": { hr: "Zvučni sustav", en: "Sound system", de: "Soundsystem" },
+      "am-ent-3": { hr: "Gramofon", en: "Record player", de: "Plattenspieler" },
+      "am-ent-4": { hr: "Knjige", en: "Books", de: "Bücher" },
+      "am-ent-5": { hr: "Društvene igre", en: "Board games", de: "Brettspiele" },
+      "am-ac-title": { hr: "Grijanje i hlađenje", en: "Heating and cooling", de: "Heizung und Kühlung" },
+      "am-ac-1": { hr: "Klima uređaj", en: "Air conditioning", de: "Klimaanlage" },
+      "am-ac-2": { hr: "Grijanje", en: "Heating", de: "Heizung" },
+      "am-ac-3": { hr: "Prijenosni ventilatori", en: "Portable fans", de: "Tragbare Ventilatoren" },
+      "am-kit-title": { hr: "Kuhinja", en: "Kitchen", de: "Küche" },
+      "am-kit-1": { hr: "Potpuno opremljena kuhinja", en: "Fully equipped kitchen", de: "Voll ausgestattete Küche" },
+      "am-kit-2": { hr: "Hladnjak i zamrzivač", en: "Refrigerator and freezer", de: "Kühlschrank und Gefrierschrank" },
+      "am-kit-3": { hr: "Pećnica i mikrovalna pećnica", en: "Oven and microwave", de: "Backofen und Mikrowelle" },
+      "am-kit-4": { hr: "Perilica posuđa", en: "Dishwasher", de: "Spülmaschine" },
+      "am-kit-5": { hr: "Aparat za kavu i toster", en: "Coffee maker and toaster", de: "Kaffeemaschine und Toaster" },
+      "am-kit-6": { hr: "Pribor za roštilj", en: "Barbecue utensils", de: "Grillutensilien" },
+      "am-out-title": { hr: "Vanjski prostor", en: "Outdoor space", de: "Außenbereich" },
+      "am-out-1": { hr: "Privatno dvorište", en: "Private courtyard", de: "Privater Innenhof" },
+      "am-out-2": { hr: "Roštilj", en: "BBQ grill", de: "Grillplatz" },
+      "am-out-3": { hr: "Vanjska kuhinja", en: "Outdoor kitchen", de: "Außenküche" },
+      "am-out-4": { hr: "Vanjski prostor za sjedenje", en: "Outdoor seating area", de: "Sitzbereich im Freien" },
+      "am-out-5": { hr: "Ognjište", en: "Fire pit", de: "Feuerstelle" },
+      "am-out-6": { hr: "Bicikli", en: "Bicycles", de: "Fahrräder" },
+      "am-gen-title": { hr: "Općenito", en: "General", de: "Allgemein" },
+      "am-gen-1": { hr: "Besplatan WiFi", en: "Free WiFi", de: "Kostenloses WLAN" },
+      "am-gen-2": { hr: "Besplatan parking", en: "Free parking", de: "Kostenloser Parkplatz" },
+      "am-gen-3": { hr: "Privatni ulaz", en: "Private entrance", de: "Privater Eingang" },
+      "am-gen-4": { hr: "Perilica rublja", en: "Washing machine", de: "Waschmaschine" },
+      "am-gen-5": { hr: "Vatrogasni aparat", en: "Fire extinguisher", de: "Feuerlöscher" },
+      "am-gen-6": { hr: "Kutija prve pomoći", en: "First aid kit", de: "Erste-Hilfe-Set" },
+      "am-spec-title": { hr: "Posebno", en: "Special", de: "Besonderes" },
+      "am-spec-1": { hr: "Dopušteni kućni ljubimci", en: "Pets allowed", de: "Haustiere erlaubt" },
+      "am-spec-2": { hr: "Dopušteno pušenje", en: "Smoking allowed", de: "Rauchen erlaubt" },
+      "am-spec-3": { hr: "Dobrodošli dugi boravci", en: "Long term stays allowed", de: "Langzeitaufenthalte willkommen" },
+      "am-spec-4": { hr: "Čišćenje na zahtjev", en: "Cleaning on request", de: "Reinigung auf Anfrage" },
+      "am-spec-5": { hr: "Pohrana prtljage", en: "Luggage dropoff allowed", de: "Gepäckaufbewahrung erlaubt" },
 
       // Booking
-      "book-eyebrow": { hr: "Izravna rezervacija", en: "Direct Booking" },
-      "book-title": { hr: "Rezervirajte bez<br><em>provizije</em>", en: "Book without<br><em>commission</em>" },
-      "book-desc": { hr: "Pošaljite svoj upit putem WhatsAppa. Odgovor u roku od 1 sat.", en: "Send your inquiry via WhatsApp. Reply within 1 hour." },
-      "book-perk-1": { hr: "Izravna rezervacija", en: "Direct booking" },
-      "book-perk-2": { hr: "Odgovor u roku od 1h", en: "Reply within 1h" },
-      "book-perk-3": { hr: "Fleksibilna prijava", en: "Flexible check-in" },
-      "book-perk-4": { hr: "Ljubimci dobrodošli", en: "Pets welcome" },
-      "book-price-from": { hr: "Od", en: "From" },
-      "book-price-night": { hr: "/ noćenju", en: "/ night" },
-      "book-price-note": { hr: "Minimalno 4 noćenja · Cijena se potvrđuje na upit", en: "Minimum 4 nights · Price confirmed upon request" },
+      "book-eyebrow": { hr: "Izravna rezervacija", en: "Direct Booking", de: "Direktbuchung" },
+      "book-title": { hr: "Rezervirajte bez<br><em>provizije</em>", en: "Book without<br><em>commission</em>", de: "Buchen ohne<br><em>Provision</em>" },
+      "book-desc": { hr: "Pošaljite svoj upit putem WhatsAppa. Odgovor u roku od 1 sat.", en: "Send your inquiry via WhatsApp. Reply within 1 hour.", de: "Senden Sie Ihre Anfrage per WhatsApp. Antwort innerhalb von 1 Stunde." },
+      "book-perk-1": { hr: "Izravna rezervacija", en: "Direct booking", de: "Direktbuchung" },
+      "book-perk-2": { hr: "Odgovor u roku od 1h", en: "Reply within 1h", de: "Antwort innerhalb 1 Std." },
+      "book-perk-3": { hr: "Fleksibilna prijava", en: "Flexible check-in", de: "Flexibler Check-in" },
+      "book-perk-4": { hr: "Ljubimci dobrodošli", en: "Pets welcome", de: "Haustiere willkommen" },
+      "book-price-from": { hr: "Od", en: "From", de: "Ab" },
+      "book-price-night": { hr: "/ noćenju", en: "/ night", de: "/ Nacht" },
+      "book-price-note": { hr: "Minimalno 4 noćenja · Cijena se potvrđuje na upit", en: "Minimum 4 nights · Price confirmed upon request", de: "Mindestaufenthalt 4 Nächte · Preis wird auf Anfrage bestätigt" },
 
       // Form
-      "form-checkin": { hr: "Prijava", en: "Check-in" },
-      "form-checkout": { hr: "Odjava", en: "Check-out" },
-      "form-name-label": { hr: "Ime i prezime", en: "Full Name" },
-      "form-name-ph": { hr: "Vaše ime", en: "Your name" },
-      "form-guests-label": { hr: "Broj gostiju", en: "Number of guests" },
-      "form-guest-1": { hr: "1 gost", en: "1 guest" },
-      "form-guest-2": { hr: "2 gosta", en: "2 guests" },
-      "form-guest-3": { hr: "3 gosta", en: "3 guests" },
-      "form-email-label": { hr: "Email (opciono)", en: "Email (optional)" },
-      "form-email-ph": { hr: "vasa@email.com", en: "your@email.com" },
-      "form-note-label": { hr: "Napomena", en: "Note" },
-      "form-note-ph": { hr: "Posebni zahtjevi, pitanja...", en: "Special requests, questions..." },
-      "form-pet-label": { hr: "🐾 Donosim kućnog ljubimca", en: "🐾 I'm bringing a pet" },
-      "form-btn": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Pošalji upit na WhatsApp", en: "<i class=\"fa-brands fa-whatsapp\"></i> Send inquiry to WhatsApp" },
-      "form-reply-note": { hr: "Antonia odgovara u roku od 1 sata", en: "Antonia replies within 1 hour" },
+      "form-checkin": { hr: "Prijava", en: "Check-in", de: "Check-in" },
+      "form-checkout": { hr: "Odjava", en: "Check-out", de: "Check-out" },
+      "form-name-label": { hr: "Ime i prezime", en: "Full Name", de: "Vor- und Nachname" },
+      "form-name-ph": { hr: "Vaše ime", en: "Your name", de: "Ihr Name" },
+      "form-guests-label": { hr: "Broj gostiju", en: "Number of guests", de: "Anzahl der Gäste" },
+      "form-guest-1": { hr: "1 gost", en: "1 guest", de: "1 Gast" },
+      "form-guest-2": { hr: "2 gosta", en: "2 guests", de: "2 Gäste" },
+      "form-guest-3": { hr: "3 gosta", en: "3 guests", de: "3 Gäste" },
+      "form-email-label": { hr: "Email (opciono)", en: "Email (optional)", de: "E-Mail (optional)" },
+      "form-email-ph": { hr: "vasa@email.com", en: "your@email.com", de: "ihre@email.com" },
+      "form-note-label": { hr: "Napomena", en: "Note", de: "Anmerkung" },
+      "form-note-ph": { hr: "Posebni zahtjevi, pitanja...", en: "Special requests, questions...", de: "Besondere Wünsche, Fragen..." },
+      "form-pet-label": { hr: "🐾 Donosim kućnog ljubimca", en: "🐾 I'm bringing a pet", de: "🐾 Ich bringe ein Haustier mit" },
+      "form-btn": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Pošalji upit na WhatsApp", en: "<i class=\"fa-brands fa-whatsapp\"></i> Send inquiry to WhatsApp", de: "<i class=\"fa-brands fa-whatsapp\"></i> Anfrage per WhatsApp senden" },
+      "form-reply-note": { hr: "Antonia odgovara u roku od 1 sata", en: "Antonia replies within 1 hour", de: "Antonia antwortet innerhalb von 1 Stunde" },
 
       // Reviews
-      "rev-eyebrow": { hr: "Što kažu gosti", en: "What guests say" },
-      "rev-title": { hr: "Recenzije", en: "Reviews" },
-      "rev-sub": { hr: "Ocjena 5.0 ⭐ · Gosti se uvijek rado vraćaju", en: "Rating 5.0 ⭐ · Guests always love to return" },
+      "rev-eyebrow": { hr: "Što kažu gosti", en: "What guests say", de: "Was Gäste sagen" },
+      "rev-title": { hr: "Recenzije", en: "Reviews", de: "Bewertungen" },
+      "rev-sub": { hr: "Ocjena 5.0 ⭐ · Gosti se uvijek rado vraćaju", en: "Rating 5.0 ⭐ · Guests always love to return", de: "Bewertung 5.0 ⭐ · Gäste kommen immer wieder gerne zurück" },
+      
+      // Reviews Content
+      "rev-t1": {
+        hr: "Prekrasan bijeg od gradskog života. Etno konoba je nešto posebno — večerali smo uz svijeće i glazbu, kao da smo se vratili u prošlost. Sigurno ćemo se vratiti!",
+        en: "A beautiful escape from city life. The ethno tavern is something special — we dined by candlelight with music, as if we stepped back in time. We will definitely return!",
+        de: "Ein wunderschöner Ausbruch aus dem Stadtleben. Die Ethno-Taverne ist etwas ganz Besonderes — wir haben bei Kerzenschein und Musik gegessen, als ob wir in der Zeit zurückgereist wären. Wir kommen auf jeden Fall wieder!"
+      },
+      "rev-m1": {
+        hr: "Srpanj 2024. · 5 noćenja",
+        en: "July 2024 · 5 nights",
+        de: "Juli 2024 · 5 Nächte"
+      },
+      "rev-t2": {
+        hr: "Apartman je prekrasno uređen, besprijekorno čist i prostran. Domaćica je bila nevjerojatno ljubazna i odgovorila je na svako pitanje u roku od nekoliko minuta. Okruženje je mirno, a priroda predivna.",
+        en: "The apartment is beautifully decorated, spotlessly clean and spacious. The host was incredibly kind and answered every question within minutes. The surroundings are peaceful and the nature is beautiful.",
+        de: "Das Apartment ist wunderschön eingerichtet, makellos sauber und geräumig. Die Gastgeberin war unglaublich nett und beantwortete jede Frage innerhalb von Minuten. Die Umgebung ist friedlich und die Natur wunderschön."
+      },
+      "rev-m2": {
+        hr: "Kolovoz 2024. · 7 noćenja",
+        en: "August 2024 · 7 nights",
+        de: "August 2024 · 7 Nächte"
+      },
+      "rev-t3": {
+        hr: "Roštilj u dvorištu, tišina, zvjezdano nebo — upravo ono što smo tražili. Djeca su obožavala konobu sa svojim igrama i svjetlosnim/zvučnim efektima. Savršeno za obitelji ili parove.",
+        en: "BBQ in the yard, silence, starry sky — exactly what we were looking for. The kids loved the tavern with its games and light/sound effects. Perfect for families or couples.",
+        de: "Grillplatz im Hof, Stille, Sternenhimmel — genau das, was wir gesucht haben. Die Kinder liebten die Taverne mit ihren Spielen und Licht-/Soundeffekten. Perfekt für Familien oder Paare."
+      },
+      "rev-m3": {
+        hr: "Lipanj 2024. · 6 noćenja",
+        en: "June 2024 · 6 nights",
+        de: "Juni 2024 · 6 Nächte"
+      },
+      "rev-t4": {
+        hr: "Mir i tišina kakvu dugo nisam doživio. Dvorište je savršeno za jutarnju kavu, a konoba za večernje opuštanje. Preporučujem svima koji bježe od gradske buke.",
+        en: "Peace and quiet like I haven't experienced in a long time. The courtyard is perfect for morning coffee, and the tavern for evening relaxation. I recommend it to anyone escaping city noise.",
+        de: "Ruhe und Frieden, wie ich es schon lange nicht mehr erlebt habe. Der Innenhof eignet sich perfekt für den Morgenkaffee und die Taverne zur abendlichen Entspannung. Ich empfehle es jedem, der dem Stadtlärm entfliehen möchte."
+      },
+      "rev-m4": {
+        hr: "Kolovoz 2024. · 5 noćenja",
+        en: "August 2024 · 5 nights",
+        de: "August 2024 · 5 Nächte"
+      },
 
       // FAQ
-      "faq-eyebrow": { hr: "Imate pitanja?", en: "Have questions?" },
-      "faq-title": { hr: "FAQ", en: "FAQ" },
-      "faq-sub": { hr: "Sve što trebate znati prije dolaska.", en: "Everything you need to know before arrival." },
-      "faq-q1": { hr: "Koji je minimalni broj noći?", en: "What is the minimum stay?" },
-      "faq-a1": { hr: "Minimalni boravak je 4 noći. Za duže boravke (tjedan i više) možete se dogovoriti za povoljniju cijenu direktno putem WhatsAppa.", en: "The minimum stay is 4 nights. For longer stays (a week or more) you can negotiate a better price directly via WhatsApp." },
-      "faq-q2": { hr: "Kako se vrši prijava (check-in)?", en: "How does check-in work?" },
-      "faq-a2": { hr: "Check-in je fleksibilan i dogovara se direktno. Checkout je do 10:00. Apartman ima zaseban ulaz pa imate potpunu privatnost.", en: "Check-in is flexible and arranged directly. Checkout is by 10:00. The apartment has a separate entrance so you have complete privacy." },
-      "faq-q3": { hr: "Je li parking besplatan?", en: "Is parking free?" },
-      "faq-a3": { hr: "Da, besplatan privatni parking je dostupan direktno uz apartman. Nema ograničenja ni naplate.", en: "Yes, free private parking is available directly at the apartment. There are no restrictions or charges." },
-      "faq-q4": { hr: "Mogu li doći s kućnim ljubimcem?", en: "Can I bring a pet?" },
-      "faq-a4": { hr: "Da! Kućni ljubimci su dobrodošli. Privatno dvorište je idealno za šetnju. Samo naznačite u upitu da donosite ljubimca.", en: "Yes! Pets are welcome. The private courtyard is ideal for walking. Just indicate in your inquiry that you are bringing a pet." },
-      "faq-q5": { hr: "Što je etno konoba?", en: "What is the ethno tavern?" },
-      "faq-a5": { hr: "Etno konoba je posebna zabavna prostorija u prizemlju s kamenim zidovima, hrastovim stolom i klupama, TV-om, mini barom i hladnjakom s pićima. Ima zvučne i svjetlosne efekte — idealna za večernje druženje.", en: "The ethno tavern is a special entertainment room on the ground floor with stone walls, oak table and benches, TV, minibar, and fridge with drinks. It features sound and light effects — ideal for evening gatherings." },
-      "faq-q6": { hr: "Koliko je daleko more?", en: "How far is the sea?" },
-      "faq-a6": { hr: "Makarska rivijera je oko 30 km (otprilike 30 minuta vožnje). U blizini su i rijeka (3 km) i jezero (7 km) za kupanje u prirodi.", en: "The Makarska Riviera is about 30 km (roughly a 30-minute drive). Nearby are also a river (3 km) and a lake (7 km) for nature swimming." },
-      "faq-q7": { hr: "Kako rezervirati direktno?", en: "How to book directly?" },
-      "faq-a7": { hr: "Ispunite formu na ovoj stranici i upit će otići direktno na WhatsApp. Kontakt je direktan, cijena niža, a odgovor stiže u roku od 1 sat.", en: "Fill out the form on this page and the inquiry will go directly to WhatsApp. Contact is direct, price is lower, and the reply arrives within 1 hour." },
+      "faq-eyebrow": { hr: "Imate pitanja?", en: "Have questions?", de: "Haben Sie Fragen?" },
+      "faq-title": { hr: "FAQ", en: "FAQ", de: "FAQ" },
+      "faq-sub": { hr: "Sve što trebate znati prije dolaska.", en: "Everything you need to know before arrival.", de: "Alles, was Sie vor Ihrer Anreise wissen müssen." },
+      "faq-q1": { hr: "Koji je minimalni broj noći?", en: "What is the minimum stay?", de: "Wie hoch ist der Mindestaufenthalt?" },
+      "faq-a1": { hr: "Minimalni boravak je 4 noći. Za duže boravke (tjedan i više) možete se dogovoriti za povoljniju cijenu direktno putem WhatsAppa.", en: "The minimum stay is 4 nights. For longer stays (a week or more) you can negotiate a better price directly via WhatsApp.", de: "Der Mindestaufenthalt beträgt 4 Nächte. Für längere Aufenthalte (eine Woche oder länger) können Sie direkt über WhatsApp einen günstigeren Preis vereinbaren." },
+      "faq-q2": { hr: "Kako se vrši prijava (check-in)?", en: "How does check-in work?", de: "Wie läuft der Check-in ab?" },
+      "faq-a2": { hr: "Check-in je fleksibilan i dogovara se direktno. Checkout je do 10:00. Apartman ima zaseban ulaz pa imate potpunu privatnost.", en: "Check-in is flexible and arranged directly. Checkout is by 10:00. The apartment has a separate entrance so you have complete privacy.", de: "Der Check-in ist flexibel und wird direkt vereinbart. Der Check-out ist bis 10:00 Uhr. Das Apartment verfügt über einen separaten Eingang, sodass Sie absolute Privatsphäre genießen." },
+      "faq-q3": { hr: "Je li parking besplatan?", en: "Is parking free?", de: "Ist das Parken kostenlos?" },
+      "faq-a3": { hr: "Da, besplatan privatni parking je dostupan direktno uz apartman. Nema ograničenja ni naplate.", en: "Yes, free private parking is available directly at the apartment. There are no restrictions or charges.", de: "Ja, kostenlose Privatparkplätze stehen direkt am Apartment zur Verfügung. Es gibt keine Einschränkungen oder Gebühren." },
+      "faq-q4": { hr: "Mogu li doći s kućnim ljubimcem?", en: "Can I bring a pet?", de: "Kann ich ein Haustier mitbringen?" },
+      "faq-a4": { hr: "Da! Kućni ljubimci su dobrodošli. Privatno dvorište je idealno za šetnju. Samo naznačite u upitu da donosite ljubimca.", en: "Yes! Pets are welcome. The private courtyard is ideal for walking. Just indicate in your inquiry that you are bringing a pet.", de: "Ja! Haustiere sind herzlich willkommen. Der private Innenhof ist ideal zum Auslauf. Bitte geben Sie bei Ihrer Anfrage an, dass Sie ein Haustier mitbringen." },
+      "faq-q5": { hr: "Što je etno konoba?", en: "What is the ethno tavern?", de: "Was ist eine Ethno-Taverne?" },
+      "faq-a5": { hr: "Etno konoba je posebna zabavna prostorija u prizemlju s kamenim zidovima, hrastovim stolom i klupama, TV-om, mini barom i hladnjakom s pićima. Ima zvučne i svjetlosne efekte — idealna za večernje druženje.", en: "The ethno tavern is a special entertainment room on the ground floor with stone walls, oak table and benches, TV, minibar, and fridge with drinks. It features sound and light effects — ideal for evening gatherings.", de: "Die Ethno-Taverne ist ein spezieller Partyraum im Erdgeschoss mit Steinwänden, Eichentisch und -bänken, Fernseher, Minibar und Kühlschrank mit Getränken. Sie verfügt über Sound- und Lichteffekte — ideal für gesellige Abende." },
+      "faq-q6": { hr: "Koliko je daleko more?", en: "How far is the sea?", de: "Wie weit ist das Meer entfernt?" },
+      "faq-a6": { hr: "Makarska rivijera je oko 30 km (otprilike 30 minuta vožnje). U blizini su i rijeka (3 km) i jezero (7 km) za kupanje u prirodi.", en: "The Makarska Riviera is about 30 km (roughly a 30-minute drive). Nearby are also a river (3 km) and a lake (7 km) for nature swimming.", de: "Die Makarska Riviera ist etwa 30 km entfernt (ca. 30 Minuten Fahrt). Fluss (3 km) und See (7 km) in der Nähe laden ebenfalls zum Schwimmen in der Natur ein." },
+      "faq-q7": { hr: "Kako rezervirati direktno?", en: "How to book directly?", de: "Wie kann ich direkt buchen?" },
+      "faq-a7": { hr: "Ispunite formu na ovoj stranici i upit će otići direktno na WhatsApp. Kontakt je direktan, cijena niža, a odgovor stiže u roku od 1 sat.", en: "Fill out the form on this page and the inquiry will go directly to WhatsApp. Contact is direct, price is lower, and the reply arrives within 1 hour.", de: "Füllen Sie das Formular auf dieser Seite aus, und die Anfrage geht direkt an WhatsApp. Der Konktat ist direkt, der Preis günstiger und die Antwort kommt innerhalb von 1 Stunde." },
 
       // Mapa
-      "map-eyebrow": { hr: "Kako doći do nas", en: "How to find us" },
-      "map-title": { hr: "Lokacija", en: "Location" },
-      "map-sub": { hr: "Podbablje Gornje, Imotski · 30 km do mora · Besplatan parking", en: "Podbablje Gornje, Imotski · 30 km to the sea · Free parking" },
-      "map-pill-1": { hr: "Podbablje Gornje, Imotski, HR", en: "Podbablje Gornje, Imotski, HR" },
-      "map-pill-2": { hr: "30 km do Makarske rivijere", en: "30 km to Makarska Riviera" },
-      "map-pill-3": { hr: "7 km do jezera", en: "7 km to the lake" },
-      "map-pill-4": { hr: "Besplatan privatni parking", en: "Free private parking" },
+      "map-eyebrow": { hr: "Kako doći do nas", en: "How to find us", de: "Wie Sie uns finden" },
+      "map-title": { hr: "Lokacija", en: "Location", de: "Lage" },
+      "map-sub": { hr: "Podbablje Gornje, Imotski · 30 km do mora · Besplatan parking", en: "Podbablje Gornje, Imotski · 30 km to the sea · Free parking", de: "Podbablje Gornje, Imotski · 30 km zum Meer · Kostenloser Parkplatz" },
+      "map-pill-1": { hr: "Podbablje Gornje, Imotski, HR", en: "Podbablje Gornje, Imotski, HR", de: "Podbablje Gornje, Imotski, HR" },
+      "map-pill-2": { hr: "30 km do Makarske rivijere", en: "30 km to Makarska Riviera", de: "30 km zur Makarska Riviera" },
+      "map-pill-3": { hr: "7 km do jezera", en: "7 km to the lake", de: "7 km zum See" },
+      "map-pill-4": { hr: "Besplatan privatni parking", en: "Free private parking", de: "Kostenloser privater Parkplatz" },
 
       // Footer
-      "footer-tagline": { hr: "Vaše utočište u srcu Dalmatinske zagore.<br>Luksuz, priroda i toplina doma.", en: "Your sanctuary in the heart of the Dalmatian Hinterland.<br>Luxury, nature, and the warmth of home." },
-      "footer-links": { hr: "Brzi linkovi", en: "Quick links" },
-      "footer-contact": { hr: "Kontakt", en: "Contact" },
-      "footer-addr": { hr: "Podbablje Gornje<br>Imotski, Hrvatska", en: "Podbablje Gornje<br>Imotski, Croatia" },
-      "footer-reply": { hr: "Odgovor u roku od 1 sata", en: "Reply within 1 hour" },
-      "footer-btn": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Pošalji upit", en: "<i class=\"fa-brands fa-whatsapp\"></i> Send inquiry" },
-      "footer-copy": { hr: "© 2025 Apartment Antonia · Podbablje Gornje, Hrvatska", en: "© 2025 Apartment Antonia · Podbablje Gornje, Croatia" }
+      "footer-tagline": { hr: "Vaše utočište u srcu Dalmatinske zagore.<br>Luksuz, priroda i toplina doma.", en: "Your sanctuary in the heart of the Dalmatian Hinterland.<br>Luxury, nature, and the warmth of home.", de: "Ihre Oase im Herzen des dalmatinischen Hinterlandes.<br>Luxus, Natur und die Wärme des Zuhauses." },
+      "footer-links": { hr: "Brzi linkovi", en: "Quick links", de: "Schnelllinks" },
+      "footer-contact": { hr: "Kontakt", en: "Contact", de: "Kontakt" },
+      "footer-addr": { hr: "Podbablje Gornje<br>Imotski, Hrvatska", en: "Podbablje Gornje<br>Imotski, Croatia", de: "Podbablje Gornje<br>Imotski, Kroatien" },
+      "footer-reply": { hr: "Odgovor u roku od 1 sata", en: "Reply within 1 hour", de: "Antwort innerhalb von 1 Stunde" },
+      "footer-btn": { hr: "<i class=\"fa-brands fa-whatsapp\"></i> Pošalji upit", en: "<i class=\"fa-brands fa-whatsapp\"></i> Send inquiry", de: "<i class=\"fa-brands fa-whatsapp\"></i> Anfrage senden" },
+      "footer-copy": { hr: "© 2025 Apartment Antonia · Podbablje Gornje, Hrvatska", en: "© 2025 Apartment Antonia · Podbablje Gornje, Croatia", de: "© 2025 Apartment Antonia · Podbablje Gornje, Kroatien" }
     };
 
     (function () {
       let currentLang = localStorage.getItem('appLang') || 'hr';
-      const toggleBtn = document.getElementById('langToggle');
 
       function applyTranslations(lang) {
         document.querySelectorAll('[data-i18n]').forEach(el => {
@@ -3866,12 +4004,12 @@
           }
         });
 
-        // Update UI toggle classes
-        document.querySelectorAll('.lang-opt').forEach(opt => {
-          if (opt.getAttribute('data-lang') === lang) {
-            opt.classList.add('active');
+        // Update UI active buttons in switcher
+        document.querySelectorAll('.lang-switcher-box .lang-btn').forEach(btn => {
+          if (btn.getAttribute('data-lang') === lang) {
+            btn.classList.add('active');
           } else {
-            opt.classList.remove('active');
+            btn.classList.remove('active');
           }
         });
 
@@ -3880,22 +4018,24 @@
         
         // Update Flatpickr locales if initialized
         if (window.checkinFp && window.checkoutFp) {
-          window.checkinFp.set('locale', lang === 'en' ? 'en' : 'hr');
-          window.checkoutFp.set('locale', lang === 'en' ? 'en' : 'hr');
+          const fpLoc = lang === 'en' ? 'en' : (lang === 'de' ? 'de' : 'hr');
+          window.checkinFp.set('locale', fpLoc);
+          window.checkoutFp.set('locale', fpLoc);
         }
       }
 
       // Initial apply
       applyTranslations(currentLang);
 
-      // Toggle click
-      if (toggleBtn) {
-        toggleBtn.addEventListener('click', () => {
-          currentLang = currentLang === 'hr' ? 'en' : 'hr';
+      // Add click listeners to switcher buttons
+      document.querySelectorAll('.lang-switcher-box .lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          const selectedLang = btn.getAttribute('data-lang');
+          currentLang = selectedLang;
           localStorage.setItem('appLang', currentLang);
           applyTranslations(currentLang);
         });
-      }
+      });
     })();
   </script>
 
